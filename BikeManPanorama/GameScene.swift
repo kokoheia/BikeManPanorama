@@ -17,6 +17,7 @@ final class GameScene: SKScene {
     private var gameOverLabel: SKLabelNode?
     private var ceil: SKSpriteNode?
     private var play: SKSpriteNode?
+    private var background: SKSpriteNode?
     
     //parameters
     private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
@@ -36,7 +37,19 @@ final class GameScene: SKScene {
     override func didMove(to view: SKView) {
         createBackground()
         setupNodesInGameScene()
-        createGroundListMock()
+//        createGroundListMock()
+    }
+    
+    private func csvToArray() {
+        if let csvPath = Bundle.main.path(forResource: "mask", ofType: "pickle") {
+            do {
+                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
+                let csvArr = csvStr.components(separatedBy: .newlines)
+                print(csvArr)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func setupNodesInGameScene() {
@@ -75,22 +88,6 @@ final class GameScene: SKScene {
         createGround()
     }
     
-    private func updateDefaultGround() {
-        defaultGround?.physicsBody?.pinned = false
-        defaultGround?.physicsBody?.affectedByGravity = false
-    }
-    
-    private func jump() {
-        bikeMan?.physicsBody?.applyForce(CGVector(dx: 0, dy: 25_000))
-    }
-    
-    private func createBackground() {
-        let background = SKSpriteNode(imageNamed: "mask")
-        background.size.height = frame.size.height
-        background.position = CGPoint(x: 0, y: 0)
-        addChild(background)
-    }
-    
     private func gameOver() {
         scene?.isPaused = true
         
@@ -108,6 +105,48 @@ final class GameScene: SKScene {
         play?.zPosition = 1
         if let play = play {
             addChild(play)
+        }
+    }
+    
+    private func gameClear() {
+        scene?.isPaused = true
+        
+        gameOverLabel = SKLabelNode(text: "Game Clear!")
+        gameOverLabel?.position = CGPoint(x: 0, y: 200)
+        gameOverLabel?.fontSize = 100
+        gameOverLabel?.zPosition = 1
+        if let gameOverLabel = gameOverLabel {
+            addChild(gameOverLabel)
+        }
+        
+        play = SKSpriteNode(imageNamed: "play")
+        play?.position = CGPoint(x: 0, y: -200)
+        play?.name = "play"
+        play?.zPosition = 1
+        if let play = play {
+            addChild(play)
+        }
+    }
+    
+    
+    private func updateDefaultGround() {
+        defaultGround?.physicsBody?.pinned = false
+        defaultGround?.physicsBody?.affectedByGravity = false
+    }
+    
+    private func jump() {
+        bikeMan?.physicsBody?.applyForce(CGVector(dx: 0, dy: 25_000))
+    }
+    
+    private func createBackground() {
+        background = SKSpriteNode(imageNamed: "mask")
+        if let background = background {
+            background.size.height = frame.size.height
+            background.position = CGPoint(x: background.size.width / 2 - size.width / 2, y: 0)
+            addChild(background)
+            
+            let moveGround = SKAction.moveBy(x: -background.size.width, y: 0, duration: TimeInterval(background.size.width) / scrollSpeed)
+            background.run(moveGround)
         }
     }
     
@@ -151,6 +190,13 @@ final class GameScene: SKScene {
         if let bikeMan = bikeMan {
             if bikeMan.position.x <= -size.width / 2 - gap || bikeMan.position.y <= -size.height / 2 - gap {
                 gameOver()
+            }
+        }
+        
+        if let background = background {
+//            print(background.position)
+            if background.position.x <= -size.width / 2 - background.size.width / 2 + 1 {
+                gameClear()
             }
         }
     }
