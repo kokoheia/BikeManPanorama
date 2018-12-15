@@ -16,6 +16,7 @@ final class GameScene: SKScene {
     private var defaultGround: SKSpriteNode?
     private var gameOverLabel: SKLabelNode?
     private var ceil: SKSpriteNode?
+    private var play: SKSpriteNode?
     
     //parameters
     private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
@@ -51,7 +52,22 @@ final class GameScene: SKScene {
             startGame()
             return
         }
+        
+        let touch = touches.first
+        if let location = touch?.location(in: self) {
+            let theNodes = nodes(at: location)
+            for node in theNodes {
+                if node.name == "play" {
+                    resetGame()
+                    return
+                }
+            }
+        }
         jump()
+    }
+    
+    private func resetGame() {
+        NotificationCenter.default.post(name: .resetGameNotification, object: nil)
     }
     
     private func startGame() {
@@ -84,6 +100,14 @@ final class GameScene: SKScene {
         gameOverLabel?.zPosition = 1
         if let gameOverLabel = gameOverLabel {
             addChild(gameOverLabel)
+        }
+        
+        play = SKSpriteNode(imageNamed: "play")
+        play?.position = CGPoint(x: 0, y: -200)
+        play?.name = "play"
+        play?.zPosition = 1
+        if let play = play {
+            addChild(play)
         }
     }
     
