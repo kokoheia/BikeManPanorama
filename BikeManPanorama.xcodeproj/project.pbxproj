@@ -15,7 +15,10 @@
 		551B0F0521C3F48B0095A7BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551B0F0321C3F48B0095A7BF /* Main.storyboard */; };
 		551B0F0721C3F48E0095A7BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551B0F0621C3F48E0095A7BF /* Assets.xcassets */; };
 		551B0F0A21C3F48E0095A7BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551B0F0821C3F48E0095A7BF /* LaunchScreen.storyboard */; };
-		55DD691F21C4E66F006FFA05 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55DD691E21C4E66F006FFA05 /* data.csv */; };
+		55F4D7F921C5068700FF2F09 /* ChooseStageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7F821C5068700FF2F09 /* ChooseStageViewController.swift */; };
+		55F4D7FB21C5074100FF2F09 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7FA21C5074100FF2F09 /* Stage.swift */; };
+		55F4D7FD21C5088D00FF2F09 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7FC21C5088D00FF2F09 /* StageCell.swift */; };
+		55F4D80421C52B4D00FF2F09 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55F4D80321C52B4D00FF2F09 /* data.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,10 @@
 		551B0F0621C3F48E0095A7BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		551B0F0921C3F48E0095A7BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		551B0F0B21C3F48E0095A7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55DD691E21C4E66F006FFA05 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		55F4D7F821C5068700FF2F09 /* ChooseStageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStageViewController.swift; sourceTree = "<group>"; };
+		55F4D7FA21C5074100FF2F09 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		55F4D7FC21C5088D00FF2F09 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
+		55F4D80321C52B4D00FF2F09 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +68,61 @@
 		551B0EF821C3F48B0095A7BF /* BikeManPanorama */ = {
 			isa = PBXGroup;
 			children = (
-				55DD691E21C4E66F006FFA05 /* data.csv */,
+				55F4D80221C50FB200FF2F09 /* Storyboard */,
+				55F4D80121C50F9900FF2F09 /* Util */,
+				55F4D80021C50F7F00FF2F09 /* Model */,
+				55F4D7FF21C50F7000FF2F09 /* View */,
+				55F4D7FE21C50F5E00FF2F09 /* ViewController */,
+				551B0F0621C3F48E0095A7BF /* Assets.xcassets */,
+				551B0F0B21C3F48E0095A7BF /* Info.plist */,
+			);
+			path = BikeManPanorama;
+			sourceTree = "<group>";
+		};
+		55F4D7FE21C50F5E00FF2F09 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				551B0F0121C3F48B0095A7BF /* GameViewController.swift */,
+				55F4D7F821C5068700FF2F09 /* ChooseStageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55F4D7FF21C50F7000FF2F09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55F4D7FC21C5088D00FF2F09 /* StageCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55F4D80021C50F7F00FF2F09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55F4D7FA21C5074100FF2F09 /* Stage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55F4D80121C50F9900FF2F09 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				55F4D80321C52B4D00FF2F09 /* data.csv */,
 				551B0EF921C3F48B0095A7BF /* AppDelegate.swift */,
 				551B0EFB21C3F48B0095A7BF /* GameScene.sks */,
 				551B0EFD21C3F48B0095A7BF /* Actions.sks */,
 				551B0EFF21C3F48B0095A7BF /* GameScene.swift */,
-				551B0F0121C3F48B0095A7BF /* GameViewController.swift */,
-				551B0F0321C3F48B0095A7BF /* Main.storyboard */,
-				551B0F0621C3F48E0095A7BF /* Assets.xcassets */,
-				551B0F0821C3F48E0095A7BF /* LaunchScreen.storyboard */,
-				551B0F0B21C3F48E0095A7BF /* Info.plist */,
 			);
-			path = BikeManPanorama;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		55F4D80221C50FB200FF2F09 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				551B0F0321C3F48B0095A7BF /* Main.storyboard */,
+				551B0F0821C3F48E0095A7BF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,10 +185,10 @@
 			files = (
 				551B0F0521C3F48B0095A7BF /* Main.storyboard in Resources */,
 				551B0EFC21C3F48B0095A7BF /* GameScene.sks in Resources */,
-				55DD691F21C4E66F006FFA05 /* data.csv in Resources */,
 				551B0F0721C3F48E0095A7BF /* Assets.xcassets in Resources */,
 				551B0F0A21C3F48E0095A7BF /* LaunchScreen.storyboard in Resources */,
 				551B0EFE21C3F48B0095A7BF /* Actions.sks in Resources */,
+				55F4D80421C52B4D00FF2F09 /* data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F4D7FD21C5088D00FF2F09 /* StageCell.swift in Sources */,
 				551B0F0021C3F48B0095A7BF /* GameScene.swift in Sources */,
 				551B0F0221C3F48B0095A7BF /* GameViewController.swift in Sources */,
+				55F4D7F921C5068700FF2F09 /* ChooseStageViewController.swift in Sources */,
 				551B0EFA21C3F48B0095A7BF /* AppDelegate.swift in Sources */,
+				55F4D7FB21C5074100FF2F09 /* Stage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
