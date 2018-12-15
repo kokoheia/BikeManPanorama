@@ -18,7 +18,7 @@
 		55F4D7F921C5068700FF2F09 /* ChooseStageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7F821C5068700FF2F09 /* ChooseStageViewController.swift */; };
 		55F4D7FB21C5074100FF2F09 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7FA21C5074100FF2F09 /* Stage.swift */; };
 		55F4D7FD21C5088D00FF2F09 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7FC21C5088D00FF2F09 /* StageCell.swift */; };
-		55F4D80421C52B4D00FF2F09 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55F4D80321C52B4D00FF2F09 /* data.csv */; };
+		55F4D80621C55F1C00FF2F09 /* data.csv in Resources */ = {isa = PBXBuildFile; fileRef = 55F4D80521C55F1C00FF2F09 /* data.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		55F4D7F821C5068700FF2F09 /* ChooseStageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStageViewController.swift; sourceTree = "<group>"; };
 		55F4D7FA21C5074100FF2F09 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		55F4D7FC21C5088D00FF2F09 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
-		55F4D80321C52B4D00FF2F09 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
+		55F4D80521C55F1C00FF2F09 /* data.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		55F4D80121C50F9900FF2F09 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				55F4D80321C52B4D00FF2F09 /* data.csv */,
+				55F4D80521C55F1C00FF2F09 /* data.csv */,
 				551B0EF921C3F48B0095A7BF /* AppDelegate.swift */,
 				551B0EFB21C3F48B0095A7BF /* GameScene.sks */,
 				551B0EFD21C3F48B0095A7BF /* Actions.sks */,
@@ -187,8 +187,8 @@
 				551B0EFC21C3F48B0095A7BF /* GameScene.sks in Resources */,
 				551B0F0721C3F48E0095A7BF /* Assets.xcassets in Resources */,
 				551B0F0A21C3F48E0095A7BF /* LaunchScreen.storyboard in Resources */,
+				55F4D80621C55F1C00FF2F09 /* data.csv in Resources */,
 				551B0EFE21C3F48B0095A7BF /* Actions.sks in Resources */,
-				55F4D80421C52B4D00FF2F09 /* data.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
