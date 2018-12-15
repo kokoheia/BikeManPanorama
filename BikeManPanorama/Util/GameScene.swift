@@ -34,16 +34,21 @@ final class GameScene: SKScene {
     private let gDiffMax = 200
     private lazy var gStart: CGFloat = -size.width / 2 + defaultGround!.size.width + 500
     private let scrollSpeed = 300.0
+    private var magnification: CGFloat = 1
+    private var lineXMax: CGFloat = 0
+    private var lineXMin: CGFloat = 10000
+    private var lineYMax: CGFloat = 0
+    private var lineYMin: CGFloat = 10000
     
     override func didMove(to view: SKView) {
         createBackground()
         setupNodesInGameScene()
-        csvToArray()
+        createPointListFromCSV()
         createLine()
 //        createGroundListMock()
     }
     
-    private func csvToArray() {
+    private func createPointListFromCSV() {
         if let csvPath = Bundle.main.path(forResource: "data", ofType: "csv") {
             do {
                 let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
@@ -53,7 +58,24 @@ final class GameScene: SKScene {
                     if csvArr.firstIndex(of: coord) == 0 || csvArr.firstIndex(of: coord) == csvArr.count - 1 {
                         return CGPoint(x: 0, y: 0)
                     } else {
-                        return CGPoint(x: CGFloat(Int(arr[3]) ?? 0) - size.width / 2, y: CGFloat(Int(arr[4] ) ?? 0) - size.height / 2)
+//                        if CGFloat(Int(arr[3])!) <= lineXMin {
+//                            lineXMin = CGFloat(Int(arr[3])!)
+//                        }
+//
+//                        if CGFloat(Int(arr[3])!) >= lineXMax {
+//                            lineXMax = CGFloat(Int(arr[3])!)
+//                        }
+//
+//                        if CGFloat(Int(arr[4])!) <= lineYMin {
+//                            lineYMin = CGFloat(Int(arr[4])!)
+//                        }
+//
+//                        if CGFloat(Int(arr[4])!) >= lineYMax {
+//                            lineYMax = CGFloat(Int(arr[4])!)
+//                        }
+                        
+                        return CGPoint(x: CGFloat(Int(arr[3]) ?? 0) * magnification - size.width / 2, y: CGFloat((Int(arr[4]) ?? 0) - 400) * magnification - size.height / 2)
+                        
                     }
                 }
                 pointList = Array(pointList[1..<pointList.count-1])
@@ -149,14 +171,19 @@ final class GameScene: SKScene {
     }
     
     private func jump() {
-        bikeMan?.physicsBody?.applyForce(CGVector(dx: 0, dy: 25_000))
+        bikeMan?.physicsBody?.applyForce(CGVector(dx: 0, dy: 50_000))
     }
     
     private func createBackground() {
         background = SKSpriteNode(imageNamed: "mask")
         if let background = background {
-            background.size.height = frame.size.height
-            background.position = CGPoint(x: background.size.width / 2 - size.width / 2, y: 0)
+            let originalHeight = background.size.height
+            let newHeight = frame.size.height
+            magnification = newHeight / originalHeight
+            background.size.height = newHeight
+            background.size.width *= magnification
+//
+            background.position = CGPoint(x: background.size.width / 2 - size.width / 2, y:  background.size.height / 2 - size.height / 2)
             addChild(background)
             
             let moveGround = SKAction.moveBy(x: -background.size.width, y: 0, duration: TimeInterval(background.size.width) / scrollSpeed)
@@ -201,19 +228,25 @@ final class GameScene: SKScene {
     
     private func createLine() {
         let line = SKShapeNode(points: &pointList, count: pointList.count)
-//        line.position = CGPoint(x: 0, y: 0)
+//        let lineWidth = lineXMax - lineXMin
+//        let lineHeight = lineYMax - lineYMin
+//        let lineWidth: CGFloat = 1200
+//        let lineHeight: CGFloat = 800
+//        line.position = CGPoint(x: lineWidth / 2, y: lineHeight / 2)
 //        let lineSize =
         let path = CGMutablePath()
         path.addLines(between: pointList)
         path.closeSubpath()
-        line.physicsBody = SKPhysicsBody(polygonFrom: path)
+        line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
         line.physicsBody?.affectedByGravity = false
         line.physicsBody?.isDynamic = false
+        line.physicsBody?.pinned = true
+        line.zPosition = 1
         line.strokeColor = UIColor.white
         self.addChild(line)
         
-        let moveLine = SKAction.moveBy(x: -1200, y: 0, duration: TimeInterval(1200) / scrollSpeed)
-        
+        let moveLine = SKAction.moveBy(x: -1200 * magnification, y: 0, duration: TimeInterval(1200 * magnification) / scrollSpeed)
+
         line.run(moveLine)
     }
     
