@@ -18,11 +18,13 @@ final class GameScene: SKScene {
     private var ceil: SKSpriteNode?
     private var play: SKSpriteNode?
     private var background: SKSpriteNode?
+    private var line: SKShapeNode?
     
     //parameters
     private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
     private var pointList = [CGPoint]()
     private var isGameStarted = false
+    private var isAnimating = false
     
     //constants
     private let numberOfGround = 100
@@ -74,7 +76,7 @@ final class GameScene: SKScene {
 //                            lineYMax = CGFloat(Int(arr[4])!)
 //                        }
                         
-                        return CGPoint(x: CGFloat(Int(arr[3]) ?? 0) * magnification - size.width / 2, y: CGFloat((Int(arr[4]) ?? 0) - 400) * magnification - size.height / 2)
+                        return CGPoint(x: CGFloat(Int(arr[3]) ?? 0) * magnification - size.width / 2, y: CGFloat((Int(arr[4]) ?? 0)) * magnification - size.height / 2)
                         
                     }
                 }
@@ -92,12 +94,15 @@ final class GameScene: SKScene {
         bikeMan = childNode(withName: "bikeMan") as? SKSpriteNode
         bikeMan?.zPosition = 1
         defaultGround = childNode(withName: "defaultGround") as? SKSpriteNode
+        defaultGround?.zPosition = 1
+        
         ceil = childNode(withName: "ceil") as? SKSpriteNode
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if !isGameStarted {
             isGameStarted = true
+            isAnimating = true
             startGame()
             return
         }
@@ -112,7 +117,21 @@ final class GameScene: SKScene {
                 }
             }
         }
+        
         jump()
+    }
+    
+    private func startAnimation() {
+        let moveDefaultGround = SKAction.moveBy(x: -defaultGround!.size.width, y: 0, duration: TimeInterval(defaultGround!.size.width) / scrollSpeed)
+        defaultGround?.run(moveDefaultGround)
+        
+        let moveLine = SKAction.moveBy(x: -1200 * magnification + size.width, y: 0, duration: TimeInterval(1200 * magnification) / scrollSpeed)
+        line?.run(moveLine)
+        
+        if let background = background {
+            let moveBackground = SKAction.moveBy(x: -background.size.width + size.width, y: 0, duration: TimeInterval(background.size.width) / scrollSpeed)
+            background.run(moveBackground)
+        }
     }
     
     private func resetGame() {
@@ -120,8 +139,10 @@ final class GameScene: SKScene {
     }
     
     private func startGame() {
-        updateDefaultGround()
-        createGround()
+//        updateDefaultGround()
+//        createGround()
+        bikeMan?.physicsBody?.pinned = false
+        startAnimation()
     }
     
     private func gameOver() {
@@ -145,8 +166,7 @@ final class GameScene: SKScene {
     }
     
     private func gameClear() {
-        scene?.isPaused = true
-        
+//        scene?.isPaused = true
         gameOverLabel = SKLabelNode(text: "Game Clear!")
         gameOverLabel?.position = CGPoint(x: 0, y: 200)
         gameOverLabel?.fontSize = 100
@@ -175,7 +195,7 @@ final class GameScene: SKScene {
     }
     
     private func createBackground() {
-        background = SKSpriteNode(imageNamed: "mask")
+        background = SKSpriteNode(imageNamed: "fuji")
         if let background = background {
             let originalHeight = background.size.height
             let newHeight = frame.size.height
@@ -185,9 +205,6 @@ final class GameScene: SKScene {
 //
             background.position = CGPoint(x: background.size.width / 2 - size.width / 2, y:  background.size.height / 2 - size.height / 2)
             addChild(background)
-            
-            let moveGround = SKAction.moveBy(x: -background.size.width, y: 0, duration: TimeInterval(background.size.width) / scrollSpeed)
-            background.run(moveGround)
         }
     }
     
@@ -227,39 +244,57 @@ final class GameScene: SKScene {
     }
     
     private func createLine() {
-        let line = SKShapeNode(points: &pointList, count: pointList.count)
+        line = SKShapeNode(points: &pointList, count: pointList.count)
 //        let lineWidth = lineXMax - lineXMin
 //        let lineHeight = lineYMax - lineYMin
 //        let lineWidth: CGFloat = 1200
 //        let lineHeight: CGFloat = 800
 //        line.position = CGPoint(x: lineWidth / 2, y: lineHeight / 2)
 //        let lineSize =
-        let path = CGMutablePath()
-        path.addLines(between: pointList)
-        path.closeSubpath()
-        line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
-        line.physicsBody?.affectedByGravity = false
-        line.physicsBody?.isDynamic = false
-        line.physicsBody?.pinned = true
-        line.zPosition = 1
-        line.strokeColor = UIColor.white
-        self.addChild(line)
-        
-        let moveLine = SKAction.moveBy(x: -1200 * magnification, y: 0, duration: TimeInterval(1200 * magnification) / scrollSpeed)
-
-        line.run(moveLine)
+        if let line = line {
+            let path = CGMutablePath()
+            path.addLines(between: pointList)
+            path.closeSubpath()
+            line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
+            line.physicsBody?.affectedByGravity = false
+            line.physicsBody?.isDynamic = false
+            line.physicsBody?.pinned = true
+            line.zPosition = 1
+            line.strokeColor = UIColor.white
+            self.addChild(line)
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
+        
+        
         let gap: CGFloat = 100.0
         if let bikeMan = bikeMan {
-            if bikeMan.position.x <= -size.width / 2 - gap || bikeMan.position.y <= -size.height / 2 - gap {
+            if isAnimating && bikeMan.position.x < -size.width / 4 {
+                bikeMan.position.x += 5
+            }
+            
+            if isAnimating && bikeMan.position.x > -size.width / 4 {
+                bikeMan.position.x -= 5
+            }
+            
+            if isAnimating && bikeMan.position.x <= -size.width / 2 - gap || bikeMan.position.y <= -size.height / 2 - gap {
                 gameOver()
+            }
+            
+            if !isAnimating && bikeMan.position.x >= size.width / 2 + 50 {
+                scene?.isPaused = true
+            }
+            
+            if isGameStarted && !isAnimating {
+                bikeMan.position.x += 2
+                bikeMan.position.y += 20
             }
         }
         
         if let background = background {
-            if background.position.x <= -size.width / 2 - background.size.width / 2 + 1 {
+            if background.position.x <= size.width / 2 - background.size.width / 2 + 1 {
+                isAnimating = false
                 gameClear()
             }
         }
