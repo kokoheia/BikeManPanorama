@@ -29,6 +29,21 @@ final class GameViewController: UIViewController {
             
             view.showsFPS = true
             view.showsNodeCount = true
+            
+            addNotification()
+        }
+    }
+    
+    private func addNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(restartGame), name: .resetGameNotification, object: nil)
+    }
+    
+    @objc private func restartGame() {
+        if let view = self.view as! SKView? {
+            if let scene = SKScene(fileNamed: "GameScene") {
+                scene.scaleMode = .aspectFill
+                view.presentScene(scene)
+            }
         }
     }
 
@@ -47,4 +62,8 @@ final class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+extension Notification.Name {
+    static let resetGameNotification = Notification.Name("resetNotification")
 }
