@@ -14,11 +14,12 @@ final class GameScene: SKScene {
     //SK objects
     private var bikeMan: SKSpriteNode?
     private var defaultGround: SKSpriteNode?
+    private var gameOverLabel: SKLabelNode?
+    private var ceil: SKSpriteNode?
     
     //parameters
     private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
     private var isGameStarted = false
-    private var defaultGroundTimer: Timer?
     
     //constants
     private let numberOfGround = 100
@@ -33,10 +34,15 @@ final class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         createBackground()
+        setupNodesInGameScene()
+        createGroundListMock()
+    }
+    
+    private func setupNodesInGameScene() {
         bikeMan = childNode(withName: "bikeMan") as? SKSpriteNode
         bikeMan?.zPosition = 1
         defaultGround = childNode(withName: "defaultGround") as? SKSpriteNode
-        createGroundListMock()
+        ceil = childNode(withName: "ceil") as? SKSpriteNode
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -67,6 +73,18 @@ final class GameScene: SKScene {
         background.size.height = frame.size.height
         background.position = CGPoint(x: 0, y: 0)
         addChild(background)
+    }
+    
+    private func gameOver() {
+        scene?.isPaused = true
+        
+        gameOverLabel = SKLabelNode(text: "Game Over")
+        gameOverLabel?.position = CGPoint(x: 0, y: 200)
+        gameOverLabel?.fontSize = 100
+        gameOverLabel?.zPosition = 1
+        if let gameOverLabel = gameOverLabel {
+            addChild(gameOverLabel)
+        }
     }
     
     private func createGround() {
@@ -102,5 +120,14 @@ final class GameScene: SKScene {
             gStart += gWidth + gDiff
         }
         gStart = originalGStart
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        let gap: CGFloat = 100.0
+        if let bikeMan = bikeMan {
+            if bikeMan.position.x <= -size.width / 2 - gap || bikeMan.position.y <= -size.height / 2 - gap {
+                gameOver()
+            }
+        }
     }
 }
