@@ -43,11 +43,42 @@ final class GameScene: SKScene {
     private var lineYMin: CGFloat = 10000
     
     override func didMove(to view: SKView) {
-        createBackground()
+//        createBackground()
         setupNodesInGameScene()
         createPointListFromCSV()
-        createLine()
+        createMovie()
+//        createLine()
 //        createGroundListMock()
+        var count = 0
+        var shortPointList = [CGPoint]()
+        shortPointList = Array(pointList[0..<200])
+        if let line = line {
+            let path = CGMutablePath()
+            shortPointList = Array(pointList[0..<200])
+            path.addLines(between: shortPointList)
+            path.closeSubpath()
+            line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
+            line.physicsBody?.affectedByGravity = false
+            line.physicsBody?.isDynamic = false
+            line.physicsBody?.pinned = true
+            line.lineWidth = 100
+            line.zPosition = 1
+            line.strokeColor = UIColor.red
+            self.addChild(line)
+        }
+        let movieTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
+            if let line = self.line {
+                line.removeFromParent()
+            }
+            shortPointList = shortPointList.map({ (point) -> CGPoint in
+                return CGPoint(x: point.x + 1, y: point.y + 1)
+            })
+            self.line = SKShapeNode(points: &shortPointList, count: shortPointList.count)
+            self.line?.lineWidth = 100
+            self.line?.zPosition = 1
+            self.line?.strokeColor = UIColor.red
+            self.addChild(self.line!)
+        })
     }
     
     private func createPointListFromCSV() {
@@ -119,6 +150,25 @@ final class GameScene: SKScene {
         }
         
         jump()
+    }
+    
+    private func createMovie() {
+        var frames = [SKTexture]()
+        
+        for i in 1...60 {
+            let frame = SKTexture.init(imageNamed: "image_\(i)")
+            frames.append(frame)
+        }
+        
+        let node = SKSpriteNode(imageNamed: "image_1")
+        node.position = CGPoint(x: 0, y: 0)
+        node.size.height = size.height
+        node.size.width  = size.width
+        let animation = SKAction.animate(with: frames, timePerFrame: 0.03)
+//        SKAction.animte
+        node.run(SKAction.repeatForever(animation))
+        
+        addChild(node)
     }
     
     private func startAnimation() {
@@ -266,8 +316,6 @@ final class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
-        
         let gap: CGFloat = 100.0
         if let bikeMan = bikeMan {
             if isAnimating && bikeMan.position.x < -size.width / 4 {
