@@ -22,8 +22,8 @@ final class ChooseStageViewController: UIViewController {
     
     private func makeStageMock() {
         let akibaKanda = Stage(name: "秋葉原→神田", image: #imageLiteral(resourceName: "fuji"))
-        let meguroGotanda = Stage(name: "目黒→五反田", image: #imageLiteral(resourceName: "fuji"))
-        let tamachiShinagawa = Stage(name: "田町→品川", image: #imageLiteral(resourceName: "fuji"))
+        let meguroGotanda = Stage(name: "目黒→五反田", image: #imageLiteral(resourceName: "free"))
+        let tamachiShinagawa = Stage(name: "田町→品川", image: #imageLiteral(resourceName: "image_84"))
         stages = [akibaKanda, meguroGotanda, tamachiShinagawa]
     }
 }
