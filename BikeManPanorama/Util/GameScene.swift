@@ -45,34 +45,26 @@ final class GameScene: SKScene {
     private var lineYMax: CGFloat = 0
     private var lineYMin: CGFloat = 10000
     private var count: Int = 3
+    private var currentFrameCount = 0
     
     private let bikeManCategory: UInt32 = 0x1 << 1
     private let groundCategory: UInt32 = 0x1 << 2
     
     override func didMove(to view: SKView) {
-//        createBackground()
+        physicsWorld.contactDelegate = self
         setupNodesInGameScene()
-        createPointListFromCSV()
-//        createMovie()
-//        createLine()
-//        createGroundListMock()
         createMovieBG()
         countdown(count: count)
-        
     }
     
     private func getJSONData() throws -> Data? {
         guard let path = Bundle.main.path(forResource: "VID_cropped.max", ofType: "json") else { return nil }
         let url = URL(fileURLWithPath: path)
-        
         return try Data(contentsOf: url)
     }
     
     private func createRealTimeLine() {
-        
         guard let data = try? getJSONData() else { return }
-        var currentFrameCount = 0
-        
         do {
             let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: [])
             guard let jsonArray = jsonResponse as? [[String: Any]] else {
@@ -85,103 +77,48 @@ final class GameScene: SKScene {
             
             let cgPointList: [[CGPoint]] = realStageList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
             
-            var tempCgList: [CGPoint] = cgPointList[(cgPointList.count - currentFrameCount) % cgPointList.count]
+            createLine(with: cgPointList)
             
-            line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
-            line?.physicsBody?.categoryBitMask = groundCategory
-            line?.physicsBody?.contactTestBitMask = bikeManCategory
-            line?.physicsBody?.collisionBitMask = bikeManCategory
-            //        let lineWidth = lineXMax - lineXMin
-            //        let lineHeight = lineYMax - lineYMin
-            //        let lineWidth: CGFloat = 1200
-            //        let lineHeight: CGFloat = 800
-            //        line.position = CGPoint(x: lineWidth / 2, y: lineHeight / 2)
-            //        let lineSize =
-            if let line = line {
-                let path = CGMutablePath()
-                path.addLines(between: tempCgList)
-                path.closeSubpath()
-                line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
-                line.physicsBody?.affectedByGravity = false
-                line.physicsBody?.isDynamic = false
-                line.physicsBody?.pinned = true
-                line.zPosition = 1
-                line.strokeColor = UIColor.white
-                self.addChild(line)
-            }
         } catch let parsingError {
             print("Error", parsingError)
         }
-        
-        
         let movieTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
-            currentFrameCount += 1
-            if currentFrameCount >= 184 {
-                currentFrameCount %= 183
+            self.self.currentFrameCount += 1
+            if self.currentFrameCount >= 184 {
+                self.currentFrameCount %= 183
             }
             if let line = self.line {
                 line.removeFromParent()
             }
-//            shortPointList = shortPointList.map({ (point) -> CGPoint in
-//                return CGPoint(x: point.x + 1, y: point.y + 1)
-//            })
             let cgPointList: [[CGPoint]] = self.realStageList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
             
-            var tempCgList: [CGPoint] = cgPointList[(cgPointList.count - currentFrameCount) % cgPointList.count]
-            self.line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
-            let path = CGMutablePath()
-            path.addLines(between: tempCgList)
-            path.closeSubpath()
-            self.line?.physicsBody = SKPhysicsBody(edgeChainFrom: path)
-            self.line?.physicsBody?.categoryBitMask = self.groundCategory
-            self.line?.physicsBody?.contactTestBitMask = self.bikeManCategory
-            self.line?.physicsBody?.collisionBitMask = self.bikeManCategory
-            self.line?.physicsBody?.affectedByGravity = false
-            self.line?.physicsBody?.isDynamic = false
-            self.line?.physicsBody?.pinned = true
-            self.line?.lineWidth = 10
-            self.line?.zPosition = 1
-            self.line?.strokeColor = UIColor.red
-            self.addChild(self.line!)
+            self.createLine(with: cgPointList)
         })
     }
     
-    private func createPointListFromCSV() {
-        if let csvPath = Bundle.main.path(forResource: "data", ofType: "csv") {
-            do {
-                let csvStr = try String(contentsOfFile:csvPath, encoding:String.Encoding.utf8)
-                let csvArr = csvStr.components(separatedBy: .newlines)
-                pointList = csvArr.map { (coord) -> CGPoint in
-                    let arr = coord.components(separatedBy: ",")
-                    if csvArr.firstIndex(of: coord) == 0 || csvArr.firstIndex(of: coord) == csvArr.count - 1 {
-                        return CGPoint(x: 0, y: 0)
-                    } else {
-//                        if CGFloat(Int(arr[3])!) <= lineXMin {
-//                            lineXMin = CGFloat(Int(arr[3])!)
-//                        }
-//
-//                        if CGFloat(Int(arr[3])!) >= lineXMax {
-//                            lineXMax = CGFloat(Int(arr[3])!)
-//                        }
-//
-//                        if CGFloat(Int(arr[4])!) <= lineYMin {
-//                            lineYMin = CGFloat(Int(arr[4])!)
-//                        }
-//
-//                        if CGFloat(Int(arr[4])!) >= lineYMax {
-//                            lineYMax = CGFloat(Int(arr[4])!)
-//                        }
-                        
-                        return CGPoint(x: CGFloat(Int(arr[3]) ?? 0) * magnification - size.width / 2, y: CGFloat((Int(arr[4]) ?? 0)) * magnification - size.height / 2)
-                    }
-                }
-                pointList = Array(pointList[1..<pointList.count-1])
-//                print(pointList)
-//                print(pointList.count)
-                
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
+    private func createLine(with list: [[CGPoint]]) {
+        //reverse image
+        var tempCgList: [CGPoint] = list[(list.count - currentFrameCount) % list.count]
+        
+        line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
+        line?.physicsBody?.categoryBitMask = groundCategory
+        line?.physicsBody?.contactTestBitMask = bikeManCategory
+        line?.physicsBody?.collisionBitMask = bikeManCategory
+        if let line = line {
+            let path = CGMutablePath()
+            path.addLines(between: tempCgList)
+            path.closeSubpath()
+            line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
+            line.physicsBody?.categoryBitMask = self.groundCategory
+            line.physicsBody?.contactTestBitMask = self.bikeManCategory
+            line.physicsBody?.collisionBitMask = self.bikeManCategory
+            line.physicsBody?.affectedByGravity = false
+            line.physicsBody?.isDynamic = false
+            line.physicsBody?.pinned = true
+            line.zPosition = 1
+            line.strokeColor = UIColor.red
+            line.lineWidth = 10
+            self.addChild(line)
         }
     }
     
@@ -189,6 +126,8 @@ final class GameScene: SKScene {
         bikeMan = childNode(withName: "bikeMan") as? SKSpriteNode
         bikeMan?.physicsBody?.categoryBitMask = bikeManCategory
         bikeMan?.physicsBody?.contactTestBitMask = groundCategory
+        bikeMan?.physicsBody?.collisionBitMask = groundCategory
+
         bikeMan?.zPosition = 1
         defaultGround = childNode(withName: "defaultGround") as? SKSpriteNode
         defaultGround?.zPosition = 1
@@ -197,16 +136,6 @@ final class GameScene: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        if let countdownLabel = self.countdownLabel {
-//            countdownLabel.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-//        }
-//        if !isGameStarted {
-//            isGameStarted = true
-//            isAnimating = true
-//            startGame()
-//            return
-//        }
-//
         let touch = touches.first
         if let location = touch?.location(in: self) {
             let theNodes = nodes(at: location)
@@ -225,9 +154,7 @@ final class GameScene: SKScene {
         if let countdownLabel = countdownLabel {
             countdownLabel.horizontalAlignmentMode = .center
             countdownLabel.verticalAlignmentMode = .baseline
-//            countdownLabel.position = CGPoint(x: , y: size.height*(1/3))
             countdownLabel.fontColor = .white
-//            countdownLabel.fontSize = size.height / 30
             countdownLabel.zPosition = 100
             countdownLabel.text = "\(count)"
         }
@@ -282,13 +209,6 @@ final class GameScene: SKScene {
         if let movieBG = movieBG {
             movieBG.removeFromParent()
             movieBG.position = CGPoint(x: 360 / 2 * 3.38  - size.width / 2, y: 720 / 2 * 3.38 - size.height / 2)
-//            movieBG.size.height *= 3.38
-//            movieBG.size.width  *= 3.38
-//            let originalHeight: CGFloat = 720
-//            let newHeight = frame.size.height
-//            movieBG.size.height = size.height
-//            magnification = newHeight / originalHeight
-//            movieBG.size.width  = size.width * magnification
             let animation = SKAction.animate(with: frames, timePerFrame: 0.03)
             movieBG.run(SKAction.repeatForever(animation))
             addChild(movieBG)
@@ -296,8 +216,6 @@ final class GameScene: SKScene {
     }
     
     private func startAnimation() {
-//        let moveDefaultGround = SKAction.moveBy(x: -defaultGround!.size.width, y: 0, duration: TimeInterval(defaultGround!.size.width) / scrollSpeed)
-//        defaultGround?.run(moveDefaultGround)
         defaultGround?.removeFromParent()
         
         let moveLine = SKAction.moveBy(x: -1200 * magnification + size.width, y: 0, duration: TimeInterval(1200 * magnification) / scrollSpeed)
@@ -316,8 +234,6 @@ final class GameScene: SKScene {
     }
     
     private func startGame() {
-//        updateDefaultGround()
-//        createGround()
         bikeMan?.physicsBody?.pinned = false
         startAnimation()
     }
@@ -343,7 +259,6 @@ final class GameScene: SKScene {
     }
     
     private func gameClear() {
-//        scene?.isPaused = true
         gameOverLabel = SKLabelNode(text: "Game Clear!")
         gameOverLabel?.position = CGPoint(x: 0, y: 200)
         gameOverLabel?.fontSize = 100
@@ -369,77 +284,6 @@ final class GameScene: SKScene {
     
     private func jump() {
         bikeMan?.physicsBody?.applyForce(CGVector(dx: 0, dy: 50_000))
-    }
-    
-    private func createBackground() {
-        background = SKSpriteNode(imageNamed: "fuji")
-        if let background = background {
-            let originalHeight = background.size.height
-            let newHeight = frame.size.height
-            magnification = newHeight / originalHeight
-            background.size.height = newHeight
-            background.size.width *= magnification
-//
-            background.position = CGPoint(x: background.size.width / 2 - size.width / 2, y:  background.size.height / 2 - size.height / 2)
-            addChild(background)
-        }
-    }
-    
-    private func createGround() {
-        for (index, elem) in groundList.enumerated() {
-            let gWidth = elem.maxX - elem.minX
-            let gHeight = abs(elem.maxY - elem.minY)
-            let gSize = CGSize(width: gWidth, height: gHeight)
-            
-            let ground = SKSpriteNode(color: .red, size: gSize)
-            ground.physicsBody = SKPhysicsBody(rectangleOf: gSize)
-            ground.physicsBody?.affectedByGravity = false
-            ground.physicsBody?.isDynamic = false
-            addChild(ground)
-            
-            let groundCX = elem.minX + gWidth / 2
-            let groundCY = elem.minY - gHeight / 2
-            ground.position = CGPoint(x: groundCX, y: groundCY)
-            ground.zPosition = 1
-            
-            let moveGround = SKAction.moveBy(x: -gStart - groundCX - gWidth - gWidth * CGFloat(index), y: 0, duration: TimeInterval(gStart + groundCX + gWidth + gWidth * CGFloat(index)) / scrollSpeed)
-            
-            ground.run(moveGround)
-        }
-    }
-    
-    private func createGroundListMock() {
-        let originalGStart = gStart
-        for _ in 0..<numberOfGround {
-            let gWidth = CGFloat(Int.random(in: gWidthMin..<gWidthMax))
-            let gHeight = CGFloat(Int.random(in: gHeightMin..<gHeightMax))
-            let gDiff = CGFloat(Int.random(in: gDiffMin..<gDiffMax))
-            groundList.append((minX: gStart, minY: -size.height / 2 + gHeight, maxX: gStart + gWidth, maxY: -size.height / 2))
-            gStart += gWidth + gDiff
-        }
-        gStart = originalGStart
-    }
-    
-    private func createLine() {
-        line = SKShapeNode(points: &pointList, count: pointList.count)
-//        let lineWidth = lineXMax - lineXMin
-//        let lineHeight = lineYMax - lineYMin
-//        let lineWidth: CGFloat = 1200
-//        let lineHeight: CGFloat = 800
-//        line.position = CGPoint(x: lineWidth / 2, y: lineHeight / 2)
-//        let lineSize =
-        if let line = line {
-            let path = CGMutablePath()
-            path.addLines(between: pointList)
-            path.closeSubpath()
-            line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
-            line.physicsBody?.affectedByGravity = false
-            line.physicsBody?.isDynamic = false
-            line.physicsBody?.pinned = true
-            line.zPosition = 1
-            line.strokeColor = UIColor.white
-            self.addChild(line)
-        }
     }
     
     override func update(_ currentTime: TimeInterval) {
