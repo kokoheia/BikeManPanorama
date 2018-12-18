@@ -46,6 +46,7 @@ extension ChooseStageViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GameViewController") as? GameViewController {
+            viewController.name = stages[indexPath.item].name
             present(viewController, animated: true, completion: nil)
         }
     }
