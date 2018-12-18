@@ -211,7 +211,6 @@ final class GameScene: SKScene {
     
     private func animateMovie(mode: String) {
         var frames = [SKTexture]()
-
         if mode == "秋葉原→神田" {
             for i in 1...183 {
                 let index = 184 - i
@@ -220,7 +219,7 @@ final class GameScene: SKScene {
             }
         } else {
             for i in 101...351 {
-                let index = 352 - i
+                let index = 452 - i
                 let frame = SKTexture.init(imageNamed: "image2_\(index)")
                 frames.append(frame)
             }
