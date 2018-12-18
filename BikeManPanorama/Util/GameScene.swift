@@ -21,6 +21,8 @@ final class GameScene: SKScene {
     private var line: SKShapeNode?
     private var movieBG: SKSpriteNode?
     private var countdownLabel: SKLabelNode?
+    private var lineTimer: Timer?
+    var mode: String?
     
     //parameters
     private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
@@ -53,23 +55,26 @@ final class GameScene: SKScene {
     override func didMove(to view: SKView) {
         physicsWorld.contactDelegate = self
         setupNodesInGameScene()
-        createMovieBG()
+        if let mode = mode {
+            createMovieBG(mode: mode)
+        }
         countdown(count: count)
     }
     
-    private func getJSONData() throws -> Data? {
-        guard let path = Bundle.main.path(forResource: "VID_cropped.max", ofType: "json") else { return nil }
+    private func getJSONData(jsonWithoutExtension json: String) throws -> Data? {
+        guard let path = Bundle.main.path(forResource: json, ofType: "json") else { return nil }
         let url = URL(fileURLWithPath: path)
         return try Data(contentsOf: url)
     }
     
-    private func createRealTimeLine() {
-        guard let data = try? getJSONData() else { return }
+    private func createPointListFromJSON(with data: Data) {
+        var dataSize = 0
         do {
-            let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: [])
+            let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
             guard let jsonArray = jsonResponse as? [[String: Any]] else {
                 return
             }
+            dataSize = jsonArray.count
             realStageList = jsonArray.map { (json) -> RealStage in
                 let realStage = RealStage(img: json["img"] as! [Dictionary<String, Int>])
                 return realStage
@@ -82,16 +87,15 @@ final class GameScene: SKScene {
         } catch let parsingError {
             print("Error", parsingError)
         }
-        let movieTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
+        lineTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
             self.self.currentFrameCount += 1
-            if self.currentFrameCount >= 184 {
-                self.currentFrameCount %= 183
+            if self.currentFrameCount > dataSize {
+                self.currentFrameCount %= dataSize
             }
             if let line = self.line {
                 line.removeFromParent()
             }
             let cgPointList: [[CGPoint]] = self.realStageList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
-            
             self.createLine(with: cgPointList)
         })
     }
@@ -102,6 +106,7 @@ final class GameScene: SKScene {
         
         line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
         line?.physicsBody?.categoryBitMask = groundCategory
+        line?.physicsBody?.usesPreciseCollisionDetection = true
         line?.physicsBody?.contactTestBitMask = bikeManCategory
         line?.physicsBody?.collisionBitMask = bikeManCategory
         if let line = line {
@@ -115,6 +120,7 @@ final class GameScene: SKScene {
             line.physicsBody?.affectedByGravity = false
             line.physicsBody?.isDynamic = false
             line.physicsBody?.pinned = true
+            line.physicsBody?.usesPreciseCollisionDetection = true
             line.zPosition = 1
             line.strokeColor = UIColor.red
             line.lineWidth = 10
@@ -124,6 +130,7 @@ final class GameScene: SKScene {
     
     private func setupNodesInGameScene() {
         bikeMan = childNode(withName: "bikeMan") as? SKSpriteNode
+        bikeMan?.physicsBody?.usesPreciseCollisionDetection = true
         bikeMan?.physicsBody?.categoryBitMask = bikeManCategory
         bikeMan?.physicsBody?.contactTestBitMask = groundCategory
         bikeMan?.physicsBody?.collisionBitMask = groundCategory
@@ -188,8 +195,12 @@ final class GameScene: SKScene {
         }
     }
     
-    private func createMovieBG() {
-        movieBG = SKSpriteNode(imageNamed: "image_1")
+    private func createMovieBG(mode: String) {
+        if mode == "秋葉原→神田" {
+            movieBG = SKSpriteNode(imageNamed: "image_1")
+        } else {
+            movieBG = SKSpriteNode(imageNamed: "image2_101")
+        }
         if let movieBG = movieBG {
             movieBG.position = CGPoint(x: 360 / 2 * 3.38 - size.width / 2, y: 720 / 2 * 3.38 - size.height / 2)
             movieBG.size.height *= 3.38
@@ -198,14 +209,23 @@ final class GameScene: SKScene {
         }
     }
     
-    private func animateMovie() {
+    private func animateMovie(mode: String) {
         var frames = [SKTexture]()
-        
-        for i in 1...183 {
-            let index = 184 - i
-            let frame = SKTexture.init(imageNamed: "image_\(index)")
-            frames.append(frame)
+
+        if mode == "秋葉原→神田" {
+            for i in 1...183 {
+                let index = 184 - i
+                let frame = SKTexture.init(imageNamed: "image_\(index)")
+                frames.append(frame)
+            }
+        } else {
+            for i in 101...351 {
+                let index = 352 - i
+                let frame = SKTexture.init(imageNamed: "image2_\(index)")
+                frames.append(frame)
+            }
         }
+        
         if let movieBG = movieBG {
             movieBG.removeFromParent()
             movieBG.position = CGPoint(x: 360 / 2 * 3.38  - size.width / 2, y: 720 / 2 * 3.38 - size.height / 2)
@@ -225,8 +245,13 @@ final class GameScene: SKScene {
             let moveBackground = SKAction.moveBy(x: -background.size.width + size.width, y: 0, duration: TimeInterval(background.size.width) / scrollSpeed)
             background.run(moveBackground)
         }
-        createRealTimeLine()
-        animateMovie()
+        
+        var jsonString = mode == "秋葉原→神田" ? "VID_cropped.max" : "VID_250_mask"
+        
+        if let data = try? getJSONData(jsonWithoutExtension: jsonString) {
+            createPointListFromJSON(with: data!)
+        }
+        animateMovie(mode: mode!)
     }
     
     private func resetGame() {
@@ -243,11 +268,14 @@ final class GameScene: SKScene {
         
         gameOverLabel = SKLabelNode(text: "Game Over")
         gameOverLabel?.position = CGPoint(x: 0, y: 200)
-        gameOverLabel?.fontSize = 100
+        gameOverLabel?.fontSize = 200
+        gameOverLabel?.fontName = UIFont.boldSystemFont(ofSize: 200).fontName
         gameOverLabel?.zPosition = 1
         if let gameOverLabel = gameOverLabel {
             addChild(gameOverLabel)
         }
+        
+        lineTimer?.invalidate()
         
         play = SKSpriteNode(imageNamed: "play")
         play?.position = CGPoint(x: 0, y: -200)
@@ -261,6 +289,7 @@ final class GameScene: SKScene {
     private func gameClear() {
         gameOverLabel = SKLabelNode(text: "Game Clear!")
         gameOverLabel?.position = CGPoint(x: 0, y: 200)
+        gameOverLabel?.fontName = UIFont.boldSystemFont(ofSize: 200).fontName
         gameOverLabel?.fontSize = 100
         gameOverLabel?.zPosition = 1
         if let gameOverLabel = gameOverLabel {
@@ -289,6 +318,7 @@ final class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         let gap: CGFloat = 100.0
         if let bikeMan = bikeMan {
+   
             if isAnimating && bikeMan.position.x < -size.width / 4 {
                 bikeMan.position.x += 5
             }
@@ -324,10 +354,12 @@ final class GameScene: SKScene {
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == bikeManCategory {
+            contact.bodyA.angularVelocity = 0
             print("contact!")
         }
         
         if contact.bodyB.categoryBitMask == bikeManCategory {
+            contact.bodyB.angularVelocity = 0
             print("contact!")
         }
     }
