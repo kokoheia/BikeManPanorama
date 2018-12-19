@@ -20,6 +20,7 @@
 		55F4D7FD21C5088D00FF2F09 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D7FC21C5088D00FF2F09 /* StageCell.swift */; };
 		55F4D82C21C5B59100FF2F09 /* VID_cropped.max.json in Resources */ = {isa = PBXBuildFile; fileRef = 55F4D82B21C5B59100FF2F09 /* VID_cropped.max.json */; };
 		55F4D82E21C5B7EB00FF2F09 /* RealStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F4D82D21C5B7EB00FF2F09 /* RealStage.swift */; };
+		55F4D83021C7923700FF2F09 /* VID_250_mask.json in Resources */ = {isa = PBXBuildFile; fileRef = 55F4D82F21C7923600FF2F09 /* VID_250_mask.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		55F4D7FC21C5088D00FF2F09 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
 		55F4D82B21C5B59100FF2F09 /* VID_cropped.max.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VID_cropped.max.json; sourceTree = "<group>"; };
 		55F4D82D21C5B7EB00FF2F09 /* RealStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealStage.swift; sourceTree = "<group>"; };
+		55F4D82F21C7923600FF2F09 /* VID_250_mask.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VID_250_mask.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		55F4D80121C50F9900FF2F09 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				55F4D82F21C7923600FF2F09 /* VID_250_mask.json */,
 				55F4D82B21C5B59100FF2F09 /* VID_cropped.max.json */,
 				551B0EF921C3F48B0095A7BF /* AppDelegate.swift */,
 				551B0EFB21C3F48B0095A7BF /* GameScene.sks */,
@@ -190,6 +193,7 @@
 				551B0EFC21C3F48B0095A7BF /* GameScene.sks in Resources */,
 				551B0F0721C3F48E0095A7BF /* Assets.xcassets in Resources */,
 				55F4D82C21C5B59100FF2F09 /* VID_cropped.max.json in Resources */,
+				55F4D83021C7923700FF2F09 /* VID_250_mask.json in Resources */,
 				551B0F0A21C3F48E0095A7BF /* LaunchScreen.storyboard in Resources */,
 				551B0EFE21C3F48B0095A7BF /* Actions.sks in Resources */,
 			);
