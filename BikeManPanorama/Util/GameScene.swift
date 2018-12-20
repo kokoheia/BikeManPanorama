@@ -103,6 +103,7 @@ final class GameScene: SKScene {
     private func createLine(with list: [[CGPoint]]) {
         //reverse image
         var tempCgList: [CGPoint] = list[(list.count - currentFrameCount) % list.count]
+//        var tempCgList: [CGPoint] = list[currentFrameCount % list.count]
         
         line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
         line?.physicsBody?.categoryBitMask = groundCategory
@@ -245,7 +246,7 @@ final class GameScene: SKScene {
             background.run(moveBackground)
         }
         
-        var jsonString = mode == "秋葉原→神田" ? "VID_cropped.max" : "VID_250_mask"
+        let jsonString = mode == "秋葉原→神田" ? "VID_cropped.mask" : "VID_250_mask"
         
         if let data = try? getJSONData(jsonWithoutExtension: jsonString) {
             createPointListFromJSON(with: data!)
@@ -354,12 +355,12 @@ extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == bikeManCategory {
             contact.bodyA.angularVelocity = 0
-            print("contact!")
+//            print("contact!")
         }
         
         if contact.bodyB.categoryBitMask == bikeManCategory {
             contact.bodyB.angularVelocity = 0
-            print("contact!")
+//            print("contact!")
         }
     }
 }

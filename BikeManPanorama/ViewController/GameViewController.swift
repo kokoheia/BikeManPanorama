@@ -12,26 +12,16 @@ import GameplayKit
 
 final class GameViewController: UIViewController {
     
-    var name: String?
-    
-    
+    var mode: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
-            if name == "秋葉原→神田" {
-                if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
-                    scene.scaleMode = .aspectFill
-                    scene.mode = "秋葉原→神田"
-                    view.presentScene(scene)
-                }
-            } else {
-                if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
-                    scene.mode = "目黒→五反田"
-                    scene.scaleMode = .aspectFill
-                    view.presentScene(scene)
-                }
+            if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
+                scene.scaleMode = .aspectFill
+                scene.mode = mode
+                view.presentScene(scene)
             }
             view.ignoresSiblingOrder = true
             addNotification()
@@ -44,7 +34,8 @@ final class GameViewController: UIViewController {
     
     @objc private func restartGame() {
         if let view = self.view as! SKView? {
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
+                scene.mode = mode
                 scene.scaleMode = .aspectFill
                 view.presentScene(scene)
             }
