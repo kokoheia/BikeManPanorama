@@ -1,0 +1,4176 @@
+{
+  "_via_settings": {
+    "ui": {
+      "annotation_editor_height": 25,
+      "annotation_editor_fontsize": 0.8,
+      "leftsidebar_width": 18,
+      "image_grid": {
+        "img_height": 80,
+        "rshape_fill": "none",
+        "rshape_fill_opacity": 0.3,
+        "rshape_stroke": "yellow",
+        "rshape_stroke_width": 2,
+        "show_region_shape": true,
+        "show_image_policy": "all"
+      },
+      "image": {
+        "region_label": "__via_region_id__",
+        "region_label_font": "10px Sans",
+        "on_image_annotation_editor_placement": "NEAR_REGION"
+      }
+    },
+    "core": {
+      "buffer_size": 18,
+      "filepath": {},
+      "default_filepath": ""
+    },
+    "project": {
+      "name": "via_project_15Dec2018_22h1m"
+    }
+  },
+  "_via_img_metadata": {
+    "VID_20181215_161954_230.jpg56925": {
+      "filename": "VID_20181215_161954_230.jpg",
+      "size": 56925,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              172,
+              182,
+              175,
+              5,
+              2
+            ],
+            "all_points_y": [
+              378,
+              379,
+              388,
+              583,
+              585,
+              378
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              187,
+              358,
+              358,
+              180,
+              188
+            ],
+            "all_points_y": [
+              364,
+              367,
+              586,
+              585,
+              364
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_231.jpg54268": {
+      "filename": "VID_20181215_161954_231.jpg",
+      "size": 54268,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              357,
+              357,
+              1,
+              3
+            ],
+            "all_points_y": [
+              199,
+              205,
+              593,
+              590,
+              200
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_232.jpg59029": {
+      "filename": "VID_20181215_161954_232.jpg",
+      "size": 59029,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              49,
+              94,
+              277,
+              291,
+              286,
+              304,
+              300,
+              32,
+              49
+            ],
+            "all_points_y": [
+              401,
+              379,
+              381,
+              394,
+              446,
+              447,
+              584,
+              584,
+              401
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              309,
+              359,
+              358,
+              305,
+              309
+            ],
+            "all_points_y": [
+              369,
+              368,
+              589,
+              586,
+              365
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_233.jpg57232": {
+      "filename": "VID_20181215_161954_233.jpg",
+      "size": 57232,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              2,
+              357,
+              356,
+              3,
+              3
+            ],
+            "all_points_y": [
+              203,
+              205,
+              588,
+              587,
+              206
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_234.jpg44821": {
+      "filename": "VID_20181215_161954_234.jpg",
+      "size": 44821,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              4,
+              115,
+              178,
+              167,
+              1,
+              2
+            ],
+            "all_points_y": [
+              355,
+              359,
+              386,
+              574,
+              571,
+              358
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              209,
+              356,
+              358,
+              171,
+              180,
+              210
+            ],
+            "all_points_y": [
+              373,
+              374,
+              571,
+              574,
+              386,
+              371
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_235.jpg60541": {
+      "filename": "VID_20181215_161954_235.jpg",
+      "size": 60541,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              65,
+              61,
+              77,
+              77,
+              111,
+              131,
+              265,
+              264,
+              277,
+              310,
+              310,
+              355,
+              358,
+              70
+            ],
+            "all_points_y": [
+              573,
+              256,
+              252,
+              239,
+              196,
+              175,
+              175,
+              144,
+              135,
+              135,
+              173,
+              178,
+              573,
+              573
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_236.jpg47750": {
+      "filename": "VID_20181215_161954_236.jpg",
+      "size": 47750,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              40,
+              45,
+              67,
+              69,
+              50,
+              49,
+              248,
+              295,
+              303,
+              294,
+              40
+            ],
+            "all_points_y": [
+              561,
+              414,
+              416,
+              371,
+              364,
+              351,
+              352,
+              378,
+              418,
+              563,
+              560
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              324,
+              356,
+              358,
+              298,
+              301,
+              323
+            ],
+            "all_points_y": [
+              364,
+              365,
+              564,
+              564,
+              383,
+              363
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_237.jpg72336": {
+      "filename": "VID_20181215_161954_237.jpg",
+      "size": 72336,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              165,
+              156,
+              169,
+              168,
+              229,
+              242,
+              271,
+              273,
+              293,
+              304,
+              309,
+              309,
+              337,
+              337,
+              343,
+              345,
+              357,
+              358,
+              165
+            ],
+            "all_points_y": [
+              568,
+              251,
+              251,
+              232,
+              189,
+              174,
+              175,
+              171,
+              170,
+              178,
+              178,
+              172,
+              174,
+              181,
+              180,
+              175,
+              176,
+              570,
+              567
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_238.jpg50336": {
+      "filename": "VID_20181215_161954_238.jpg",
+      "size": 50336,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              0,
+              45,
+              68,
+              102,
+              97,
+              7,
+              3
+            ],
+            "all_points_y": [
+              381,
+              389,
+              450,
+              450,
+              555,
+              555,
+              381
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              178,
+              358,
+              357,
+              174,
+              180,
+              193,
+              197,
+              178,
+              180
+            ],
+            "all_points_y": [
+              351,
+              349,
+              561,
+              559,
+              419,
+              416,
+              370,
+              359,
+              351
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_239.jpg62925": {
+      "filename": "VID_20181215_161954_239.jpg",
+      "size": 62925,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              153,
+              162,
+              4,
+              1
+            ],
+            "all_points_y": [
+              354,
+              359,
+              563,
+              562,
+              354
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              250,
+              242,
+              352,
+              357,
+              251
+            ],
+            "all_points_y": [
+              563,
+              247,
+              184,
+              567,
+              564
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_240.jpg50714": {
+      "filename": "VID_20181215_161954_240.jpg",
+      "size": 50714,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              62,
+              170,
+              176,
+              271,
+              296,
+              297,
+              2,
+              4
+            ],
+            "all_points_y": [
+              377,
+              373,
+              397,
+              455,
+              459,
+              502,
+              556,
+              557,
+              372
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              358,
+              302,
+              317,
+              312,
+              301,
+              301,
+              357,
+              358
+            ],
+            "all_points_y": [
+              358,
+              356,
+              368,
+              419,
+              417,
+              555,
+              559,
+              356
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_241.jpg54473": {
+      "filename": "VID_20181215_161954_241.jpg",
+      "size": 54473,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              64,
+              31,
+              25,
+              30,
+              65,
+              261,
+              270,
+              67
+            ],
+            "all_points_y": [
+              563,
+              520,
+              431,
+              375,
+              357,
+              359,
+              561,
+              563
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              325,
+              340,
+              356,
+              358,
+              326
+            ],
+            "all_points_y": [
+              254,
+              563,
+              563,
+              241,
+              257
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_242.jpg52827": {
+      "filename": "VID_20181215_161954_242.jpg",
+      "size": 52827,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              175,
+              254,
+              265,
+              305,
+              301,
+              341,
+              360,
+              359,
+              3,
+              2
+            ],
+            "all_points_y": [
+              378,
+              378,
+              391,
+              421,
+              420,
+              455,
+              461,
+              491,
+              560,
+              554,
+              378
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_243.jpg50020": {
+      "filename": "VID_20181215_161954_243.jpg",
+      "size": 50020,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              2,
+              85,
+              102,
+              105,
+              130,
+              135,
+              150,
+              2,
+              4
+            ],
+            "all_points_y": [
+              374,
+              374,
+              389,
+              444,
+              470,
+              519,
+              556,
+              562,
+              369
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              112,
+              112,
+              121,
+              170,
+              357,
+              356,
+              169,
+              141,
+              132,
+              113
+            ],
+            "all_points_y": [
+              442,
+              404,
+              381,
+              364,
+              369,
+              570,
+              566,
+              521,
+              456,
+              441
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_244.jpg52756": {
+      "filename": "VID_20181215_161954_244.jpg",
+      "size": 52756,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              6,
+              279,
+              351,
+              359,
+              357,
+              5,
+              6
+            ],
+            "all_points_y": [
+              374,
+              375,
+              387,
+              425,
+              558,
+              552,
+              372
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_245.jpg50212": {
+      "filename": "VID_20181215_161954_245.jpg",
+      "size": 50212,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              16,
+              177,
+              197,
+              203,
+              229,
+              234,
+              111,
+              111,
+              5,
+              3
+            ],
+            "all_points_y": [
+              392,
+              366,
+              368,
+              380,
+              442,
+              465,
+              506,
+              508,
+              556,
+              555,
+              393
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              205,
+              209,
+              269,
+              355,
+              356,
+              275,
+              242,
+              235,
+              206,
+              204
+            ],
+            "all_points_y": [
+              407,
+              372,
+              361,
+              362,
+              563,
+              558,
+              509,
+              457,
+              439,
+              409
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_246.jpg48109": {
+      "filename": "VID_20181215_161954_246.jpg",
+      "size": 48109,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              64,
+              82,
+              357,
+              358,
+              59,
+              60
+            ],
+            "all_points_y": [
+              533,
+              367,
+              370,
+              538,
+              538,
+              534
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_247.jpg46962": {
+      "filename": "VID_20181215_161954_247.jpg",
+      "size": 46962,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              1,
+              102,
+              92,
+              91,
+              102,
+              104,
+              1,
+              1
+            ],
+            "all_points_y": [
+              355,
+              354,
+              368,
+              411,
+              414,
+              540,
+              545,
+              356
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              115,
+              271,
+              296,
+              300,
+              334,
+              330,
+              349,
+              351,
+              114,
+              107,
+              112
+            ],
+            "all_points_y": [
+              361,
+              361,
+              373,
+              440,
+              461,
+              502,
+              505,
+              551,
+              546,
+              406,
+              363
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_248.jpg51576": {
+      "filename": "VID_20181215_161954_248.jpg",
+      "size": 51576,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              6,
+              125,
+              190,
+              180,
+              8,
+              5
+            ],
+            "all_points_y": [
+              370,
+              367,
+              385,
+              534,
+              533,
+              370
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              195,
+              354,
+              358,
+              192,
+              196
+            ],
+            "all_points_y": [
+              365,
+              365,
+              535,
+              535,
+              369
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_249.jpg49449": {
+      "filename": "VID_20181215_161954_249.jpg",
+      "size": 49449,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              13,
+              36,
+              211,
+              214,
+              192,
+              191,
+              210,
+              214,
+              5,
+              2
+            ],
+            "all_points_y": [
+              385,
+              362,
+              346,
+              348,
+              354,
+              370,
+              413,
+              415,
+              542,
+              541,
+              382
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              214,
+              357,
+              356,
+              223,
+              212
+            ],
+            "all_points_y": [
+              364,
+              366,
+              540,
+              541,
+              367
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_250.jpg51461": {
+      "filename": "VID_20181215_161954_250.jpg",
+      "size": 51461,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              6,
+              228,
+              287,
+              288,
+              5,
+              6
+            ],
+            "all_points_y": [
+              373,
+              373,
+              383,
+              531,
+              534,
+              374
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              299,
+              359,
+              358,
+              296,
+              294,
+              302,
+              300
+            ],
+            "all_points_y": [
+              369,
+              368,
+              538,
+              538,
+              399,
+              400,
+              369
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_251.jpg52140": {
+      "filename": "VID_20181215_161954_251.jpg",
+      "size": 52140,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              73,
+              80,
+              93,
+              142,
+              313,
+              291,
+              292,
+              315,
+              323,
+              71
+            ],
+            "all_points_y": [
+              542,
+              425,
+              376,
+              351,
+              353,
+              373,
+              413,
+              418,
+              546,
+              542
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_252.jpg50496": {
+      "filename": "VID_20181215_161954_252.jpg",
+      "size": 50496,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              61,
+              339,
+              353,
+              355,
+              37,
+              59
+            ],
+            "all_points_y": [
+              381,
+              385,
+              389,
+              549,
+              543,
+              382
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_253.jpg54082": {
+      "filename": "VID_20181215_161954_253.jpg",
+      "size": 54082,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              155,
+              162,
+              193,
+              259,
+              357,
+              357,
+              159
+            ],
+            "all_points_y": [
+              556,
+              432,
+              371,
+              360,
+              361,
+              545,
+              549
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_254.jpg56960": {
+      "filename": "VID_20181215_161954_254.jpg",
+      "size": 56960,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              178,
+              171,
+              358,
+              357,
+              181
+            ],
+            "all_points_y": [
+              382,
+              544,
+              541,
+              374,
+              377
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_255.jpg54687": {
+      "filename": "VID_20181215_161954_255.jpg",
+      "size": 54687,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              118,
+              125,
+              5,
+              8
+            ],
+            "all_points_y": [
+              376,
+              384,
+              545,
+              541,
+              368
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              236,
+              243,
+              271,
+              356,
+              358,
+              235
+            ],
+            "all_points_y": [
+              542,
+              457,
+              388,
+              360,
+              547,
+              544
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_256.jpg64698": {
+      "filename": "VID_20181215_161954_256.jpg",
+      "size": 64698,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              19,
+              158,
+              144,
+              92,
+              92,
+              12,
+              15
+            ],
+            "all_points_y": [
+              207,
+              262,
+              478,
+              497,
+              532,
+              534,
+              205
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              284,
+              290,
+              357,
+              355,
+              287
+            ],
+            "all_points_y": [
+              531,
+              382,
+              380,
+              534,
+              530
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_257.jpg54408": {
+      "filename": "VID_20181215_161954_257.jpg",
+      "size": 54408,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              1,
+              230,
+              242,
+              7,
+              3
+            ],
+            "all_points_y": [
+              375,
+              378,
+              538,
+              542,
+              376
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_258.jpg60684": {
+      "filename": "VID_20181215_161954_258.jpg",
+      "size": 60684,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              21,
+              97,
+              142,
+              244,
+              234,
+              213,
+              214,
+              19,
+              19
+            ],
+            "all_points_y": [
+              174,
+              209,
+              211,
+              260,
+              489,
+              496,
+              532,
+              527,
+              172
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_259.jpg49980": {
+      "filename": "VID_20181215_161954_259.jpg",
+      "size": 49980,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              9,
+              329,
+              343,
+              11,
+              5
+            ],
+            "all_points_y": [
+              369,
+              374,
+              535,
+              530,
+              364
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_260.jpg54950": {
+      "filename": "VID_20181215_161954_260.jpg",
+      "size": 54950,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              1,
+              18,
+              24,
+              90,
+              101,
+              184,
+              265,
+              286,
+              335,
+              327,
+              7,
+              1
+            ],
+            "all_points_y": [
+              221,
+              221,
+              178,
+              193,
+              177,
+              221,
+              224,
+              241,
+              268,
+              550,
+              543,
+              225
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_261.jpg53291": {
+      "filename": "VID_20181215_161954_261.jpg",
+      "size": 53291,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              96,
+              100,
+              355,
+              357,
+              98
+            ],
+            "all_points_y": [
+              544,
+              387,
+              386,
+              550,
+              547
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_262.jpg55151": {
+      "filename": "VID_20181215_161954_262.jpg",
+      "size": 55151,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              33,
+              109,
+              111,
+              127,
+              179,
+              183,
+              249,
+              357,
+              356,
+              8,
+              32
+            ],
+            "all_points_y": [
+              236,
+              227,
+              184,
+              196,
+              197,
+              180,
+              221,
+              227,
+              554,
+              552,
+              236
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_263.jpg66899": {
+      "filename": "VID_20181215_161954_263.jpg",
+      "size": 66899,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              13,
+              159,
+              166,
+              25,
+              14
+            ],
+            "all_points_y": [
+              399,
+              401,
+              551,
+              549,
+              393
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              180,
+              180,
+              212,
+              356,
+              357,
+              183
+            ],
+            "all_points_y": [
+              545,
+              401,
+              392,
+              397,
+              557,
+              546
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_264.jpg52485": {
+      "filename": "VID_20181215_161954_264.jpg",
+      "size": 52485,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              39,
+              199,
+              205,
+              279,
+              284,
+              334,
+              326,
+              15,
+              17,
+              33,
+              39,
+              19,
+              22,
+              41,
+              44,
+              26,
+              31,
+              51,
+              53,
+              35,
+              37
+            ],
+            "all_points_y": [
+              241,
+              243,
+              200,
+              211,
+              196,
+              235,
+              561,
+              565,
+              492,
+              488,
+              454,
+              448,
+              411,
+              410,
+              367,
+              366,
+              324,
+              326,
+              293,
+              286,
+              242
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_265.jpg53388": {
+      "filename": "VID_20181215_161954_265.jpg",
+      "size": 53388,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              1,
+              274,
+              270,
+              3,
+              3
+            ],
+            "all_points_y": [
+              410,
+              414,
+              559,
+              561,
+              411
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_266.jpg54844": {
+      "filename": "VID_20181215_161954_266.jpg",
+      "size": 54844,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              131,
+              130,
+              111,
+              117,
+              135,
+              139,
+              118,
+              122,
+              147,
+              143,
+              123,
+              126,
+              149,
+              151,
+              131,
+              134,
+              276,
+              280,
+              352,
+              356,
+              132
+            ],
+            "all_points_y": [
+              556,
+              538,
+              536,
+              494,
+              491,
+              456,
+              450,
+              412,
+              409,
+              370,
+              369,
+              323,
+              327,
+              296,
+              281,
+              248,
+              245,
+              205,
+              212,
+              559,
+              558
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_267.jpg52982": {
+      "filename": "VID_20181215_161954_267.jpg",
+      "size": 52982,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              66,
+              73,
+              356,
+              358,
+              91,
+              64
+            ],
+            "all_points_y": [
+              424,
+              565,
+              561,
+              412,
+              408,
+              425
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_268.jpg57293": {
+      "filename": "VID_20181215_161954_268.jpg",
+      "size": 57293,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              221,
+              225,
+              211,
+              215,
+              241,
+              240,
+              223,
+              224,
+              243,
+              239,
+              224,
+              227,
+              242,
+              242,
+              226,
+              226,
+              357,
+              358,
+              223
+            ],
+            "all_points_y": [
+              553,
+              534,
+              531,
+              487,
+              490,
+              445,
+              442,
+              405,
+              406,
+              368,
+              361,
+              325,
+              329,
+              289,
+              281,
+              242,
+              241,
+              554,
+              553
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_269.jpg52103": {
+      "filename": "VID_20181215_161954_269.jpg",
+      "size": 52103,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              176,
+              179,
+              153,
+              154,
+              197,
+              353,
+              352,
+              177
+            ],
+            "all_points_y": [
+              557,
+              507,
+              500,
+              417,
+              406,
+              408,
+              557,
+              557
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_270.jpg51162": {
+      "filename": "VID_20181215_161954_270.jpg",
+      "size": 51162,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              12,
+              50,
+              68,
+              132,
+              169,
+              170,
+              5,
+              3,
+              18
+            ],
+            "all_points_y": [
+              362,
+              351,
+              357,
+              357,
+              402,
+              545,
+              552,
+              356,
+              359
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_271.jpg49000": {
+      "filename": "VID_20181215_161954_271.jpg",
+      "size": 49000,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              56,
+              156,
+              243,
+              244,
+              62,
+              59
+            ],
+            "all_points_y": [
+              517,
+              487,
+              521,
+              563,
+              561,
+              517
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              245,
+              286,
+              357,
+              357,
+              249,
+              244,
+              220,
+              220,
+              236,
+              236,
+              243
+            ],
+            "all_points_y": [
+              415,
+              407,
+              410,
+              560,
+              560,
+              516,
+              507,
+              491,
+              491,
+              438,
+              416
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_272.jpg51060": {
+      "filename": "VID_20181215_161954_272.jpg",
+      "size": 51060,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              235,
+              263,
+              261,
+              3,
+              6
+            ],
+            "all_points_y": [
+              361,
+              367,
+              404,
+              554,
+              554,
+              360
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_273.jpg52344": {
+      "filename": "VID_20181215_161954_273.jpg",
+      "size": 52344,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              6,
+              105,
+              114,
+              1,
+              5
+            ],
+            "all_points_y": [
+              252,
+              251,
+              561,
+              559,
+              254
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              131,
+              219,
+              332,
+              320,
+              320,
+              138,
+              140,
+              124,
+              136
+            ],
+            "all_points_y": [
+              526,
+              489,
+              530,
+              535,
+              561,
+              562,
+              531,
+              531,
+              525
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_274.jpg46432": {
+      "filename": "VID_20181215_161954_274.jpg",
+      "size": 46432,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              21,
+              43,
+              246,
+              254,
+              267,
+              327,
+              349,
+              341,
+              9,
+              21
+            ],
+            "all_points_y": [
+              387,
+              376,
+              377,
+              367,
+              375,
+              378,
+              418,
+              557,
+              546,
+              387
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_275.jpg50872": {
+      "filename": "VID_20181215_161954_275.jpg",
+      "size": 50872,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              1,
+              202,
+              214,
+              4,
+              2
+            ],
+            "all_points_y": [
+              264,
+              263,
+              566,
+              563,
+              264
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_276.jpg47470": {
+      "filename": "VID_20181215_161954_276.jpg",
+      "size": 47470,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              123,
+              149,
+              169,
+              358,
+              358,
+              116,
+              125
+            ],
+            "all_points_y": [
+              394,
+              378,
+              373,
+              372,
+              560,
+              556,
+              397
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              4,
+              110,
+              140,
+              119,
+              114,
+              4,
+              5
+            ],
+            "all_points_y": [
+              360,
+              360,
+              372,
+              397,
+              550,
+              552,
+              359
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_277.jpg49546": {
+      "filename": "VID_20181215_161954_277.jpg",
+      "size": 49546,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              72,
+              79,
+              187,
+              293,
+              305,
+              4,
+              4
+            ],
+            "all_points_y": [
+              230,
+              227,
+              263,
+              266,
+              263,
+              560,
+              562,
+              227
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_278.jpg53472": {
+      "filename": "VID_20181215_161954_278.jpg",
+      "size": 53472,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              32,
+              38,
+              52,
+              54,
+              210,
+              208,
+              243,
+              219,
+              30
+            ],
+            "all_points_y": [
+              548,
+              355,
+              355,
+              313,
+              313,
+              354,
+              369,
+              540,
+              548
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              248,
+              355,
+              357,
+              222,
+              247
+            ],
+            "all_points_y": [
+              375,
+              373,
+              534,
+              536,
+              373
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_279.jpg52523": {
+      "filename": "VID_20181215_161954_279.jpg",
+      "size": 52523,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              59,
+              60,
+              141,
+              152,
+              159,
+              359,
+              357,
+              3,
+              3
+            ],
+            "all_points_y": [
+              262,
+              263,
+              236,
+              231,
+              217,
+              260,
+              262,
+              596,
+              586,
+              263
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_280.jpg56533": {
+      "filename": "VID_20181215_161954_280.jpg",
+      "size": 56533,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              9,
+              143,
+              138,
+              1,
+              4
+            ],
+            "all_points_y": [
+              439,
+              444,
+              552,
+              558,
+              440
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              142,
+              156,
+              159,
+              162,
+              316,
+              312,
+              336,
+              327,
+              143
+            ],
+            "all_points_y": [
+              548,
+              359,
+              359,
+              316,
+              319,
+              359,
+              375,
+              545,
+              544
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_281.jpg56047": {
+      "filename": "VID_20181215_161954_281.jpg",
+      "size": 56047,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              4,
+              56,
+              49,
+              57,
+              55,
+              76,
+              132,
+              122,
+              223,
+              239,
+              244,
+              356,
+              360,
+              3,
+              2
+            ],
+            "all_points_y": [
+              522,
+              524,
+              474,
+              467,
+              314,
+              277,
+              274,
+              238,
+              238,
+              221,
+              268,
+              271,
+              566,
+              561,
+              517
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_282.jpg62776": {
+      "filename": "VID_20181215_161954_282.jpg",
+      "size": 62776,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              13,
+              25,
+              26,
+              71,
+              72,
+              145,
+              154,
+              257,
+              261,
+              268,
+              269,
+              358,
+              355,
+              8,
+              10
+            ],
+            "all_points_y": [
+              457,
+              457,
+              440,
+              445,
+              434,
+              435,
+              420,
+              426,
+              366,
+              365,
+              326,
+              326,
+              596,
+              593,
+              457
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_283.jpg58497": {
+      "filename": "VID_20181215_161954_283.jpg",
+      "size": 58497,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              62,
+              62,
+              41,
+              40,
+              133,
+              129,
+              163,
+              194,
+              194,
+              218,
+              241,
+              249,
+              304,
+              325,
+              327,
+              357,
+              357,
+              63
+            ],
+            "all_points_y": [
+              566,
+              550,
+              538,
+              526,
+              526,
+              316,
+              287,
+              282,
+              246,
+              252,
+              232,
+              245,
+              246,
+              234,
+              277,
+              278,
+              565,
+              565
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_284.jpg70320": {
+      "filename": "VID_20181215_161954_284.jpg",
+      "size": 70320,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              90,
+              99,
+              131,
+              342,
+              324,
+              90
+            ],
+            "all_points_y": [
+              555,
+              476,
+              445,
+              447,
+              554,
+              552
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_285.jpg61948": {
+      "filename": "VID_20181215_161954_285.jpg",
+      "size": 61948,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              190,
+              190,
+              235,
+              252,
+              250,
+              304,
+              306,
+              358,
+              355,
+              116,
+              116,
+              99,
+              97,
+              190
+            ],
+            "all_points_y": [
+              518,
+              313,
+              286,
+              285,
+              260,
+              239,
+              249,
+              249,
+              566,
+              566,
+              543,
+              533,
+              517,
+              521
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              69,
+              77,
+              78,
+              5,
+              4
+            ],
+            "all_points_y": [
+              384,
+              383,
+              399,
+              564,
+              560,
+              381
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_286.jpg74500": {
+      "filename": "VID_20181215_161954_286.jpg",
+      "size": 74500,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              201,
+              209,
+              237,
+              355,
+              357,
+              202
+            ],
+            "all_points_y": [
+              546,
+              455,
+              439,
+              445,
+              551,
+              547
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              10,
+              98,
+              141,
+              136,
+              8,
+              9
+            ],
+            "all_points_y": [
+              282,
+              279,
+              298,
+              545,
+              550,
+              286
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_287.jpg58618": {
+      "filename": "VID_20181215_161954_287.jpg",
+      "size": 58618,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              164,
+              168,
+              11,
+              6
+            ],
+            "all_points_y": [
+              382,
+              385,
+              556,
+              561,
+              378
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              265,
+              260,
+              314,
+              318,
+              348,
+              350,
+              358,
+              355,
+              187,
+              186,
+              172,
+              171,
+              263
+            ],
+            "all_points_y": [
+              519,
+              314,
+              286,
+              240,
+              242,
+              251,
+              247,
+              562,
+              557,
+              539,
+              536,
+              520,
+              518
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_288.jpg66222": {
+      "filename": "VID_20181215_161954_288.jpg",
+      "size": 66222,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              10,
+              219,
+              244,
+              248,
+              238,
+              188,
+              3,
+              2,
+              13
+            ],
+            "all_points_y": [
+              274,
+              287,
+              304,
+              341,
+              538,
+              555,
+              551,
+              272,
+              274
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              242,
+              249,
+              261,
+              324,
+              339,
+              358,
+              357,
+              245
+            ],
+            "all_points_y": [
+              548,
+              460,
+              450,
+              452,
+              441,
+              444,
+              549,
+              545
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_289.jpg48860": {
+      "filename": "VID_20181215_161954_289.jpg",
+      "size": 48860,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              249,
+              264,
+              6,
+              4
+            ],
+            "all_points_y": [
+              377,
+              379,
+              557,
+              545,
+              374
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_290.jpg68127": {
+      "filename": "VID_20181215_161954_290.jpg",
+      "size": 68127,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              5,
+              293,
+              333,
+              335,
+              327,
+              13,
+              7
+            ],
+            "all_points_y": [
+              266,
+              269,
+              287,
+              347,
+              536,
+              544,
+              266
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_291.jpg68533": {
+      "filename": "VID_20181215_161954_291.jpg",
+      "size": 68533,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              8,
+              73,
+              87,
+              6,
+              6
+            ],
+            "all_points_y": [
+              356,
+              356,
+              533,
+              525,
+              355
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              76,
+              345,
+              360,
+              359,
+              100,
+              76
+            ],
+            "all_points_y": [
+              368,
+              368,
+              381,
+              570,
+              567,
+              367
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_292.jpg64367": {
+      "filename": "VID_20181215_161954_292.jpg",
+      "size": 64367,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              6,
+              358,
+              358,
+              7,
+              6
+            ],
+            "all_points_y": [
+              274,
+              276,
+              552,
+              545,
+              274
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_293.jpg69043": {
+      "filename": "VID_20181215_161954_293.jpg",
+      "size": 69043,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              19,
+              6,
+              7,
+              172,
+              179,
+              20
+            ],
+            "all_points_y": [
+              563,
+              409,
+              367,
+              366,
+              570,
+              570
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              180,
+              360,
+              358,
+              186,
+              176
+            ],
+            "all_points_y": [
+              379,
+              381,
+              578,
+              574,
+              378
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_294.jpg60039": {
+      "filename": "VID_20181215_161954_294.jpg",
+      "size": 60039,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              7,
+              359,
+              359,
+              7,
+              5
+            ],
+            "all_points_y": [
+              263,
+              270,
+              580,
+              580,
+              261
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_295.jpg65086": {
+      "filename": "VID_20181215_161954_295.jpg",
+      "size": 65086,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              13,
+              84,
+              95,
+              4,
+              7
+            ],
+            "all_points_y": [
+              436,
+              442,
+              568,
+              569,
+              431
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              75,
+              100,
+              101,
+              243,
+              243,
+              254,
+              260,
+              108,
+              80,
+              80
+            ],
+            "all_points_y": [
+              368,
+              359,
+              316,
+              319,
+              357,
+              363,
+              535,
+              535,
+              415,
+              359
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_296.jpg60403": {
+      "filename": "VID_20181215_161954_296.jpg",
+      "size": 60403,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              3,
+              85,
+              82,
+              126,
+              143,
+              139,
+              356,
+              357,
+              3,
+              3
+            ],
+            "all_points_y": [
+              263,
+              263,
+              225,
+              227,
+              235,
+              263,
+              266,
+              537,
+              542,
+              263
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_297.jpg64207": {
+      "filename": "VID_20181215_161954_297.jpg",
+      "size": 64207,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              4,
+              14,
+              16,
+              25,
+              21,
+              94,
+              97,
+              159,
+              190,
+              188,
+              5,
+              5
+            ],
+            "all_points_y": [
+              406,
+              403,
+              423,
+              428,
+              408,
+              404,
+              425,
+              427,
+              457,
+              528,
+              530,
+              405
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              161,
+              159,
+              164,
+              186,
+              183,
+              322,
+              328,
+              342,
+              347,
+              198,
+              192,
+              159
+            ],
+            "all_points_y": [
+              418,
+              378,
+              358,
+              346,
+              312,
+              308,
+              345,
+              347,
+              518,
+              526,
+              444,
+              415
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_298.jpg60200": {
+      "filename": "VID_20181215_161954_298.jpg",
+      "size": 60200,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              4,
+              176,
+              174,
+              224,
+              228,
+              356,
+              356,
+              4,
+              5
+            ],
+            "all_points_y": [
+              267,
+              265,
+              225,
+              228,
+              261,
+              264,
+              538,
+              540,
+              268
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_299.jpg65444": {
+      "filename": "VID_20181215_161954_299.jpg",
+      "size": 65444,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              37,
+              56,
+              245,
+              281,
+              281,
+              40,
+              37
+            ],
+            "all_points_y": [
+              464,
+              425,
+              427,
+              453,
+              531,
+              534,
+              465
+            ]
+          },
+          "region_attributes": {}
+        },
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              237,
+              235,
+              246,
+              278,
+              360,
+              359,
+              289,
+              284,
+              238
+            ],
+            "all_points_y": [
+              420,
+              382,
+              354,
+              347,
+              346,
+              530,
+              530,
+              444,
+              420
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_300.jpg58516": {
+      "filename": "VID_20181215_161954_300.jpg",
+      "size": 58516,
+      "regions": [
+        {
+          "shape_attributes": {
+            "name": "polyline",
+            "all_points_x": [
+              77,
+              82,
+              259,
+              258,
+              306,
+              310,
+              360,
+              359,
+              78
+            ],
+            "all_points_y": [
+              541,
+              269,
+              270,
+              225,
+              230,
+              267,
+              268,
+              539,
+              539
+            ]
+          },
+          "region_attributes": {}
+        }
+      ],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_301.jpg62652": {
+      "filename": "VID_20181215_161954_301.jpg",
+      "size": 62652,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_302.jpg58083": {
+      "filename": "VID_20181215_161954_302.jpg",
+      "size": 58083,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_303.jpg64691": {
+      "filename": "VID_20181215_161954_303.jpg",
+      "size": 64691,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_304.jpg57123": {
+      "filename": "VID_20181215_161954_304.jpg",
+      "size": 57123,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_305.jpg62695": {
+      "filename": "VID_20181215_161954_305.jpg",
+      "size": 62695,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_306.jpg54818": {
+      "filename": "VID_20181215_161954_306.jpg",
+      "size": 54818,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_307.jpg59614": {
+      "filename": "VID_20181215_161954_307.jpg",
+      "size": 59614,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_308.jpg57923": {
+      "filename": "VID_20181215_161954_308.jpg",
+      "size": 57923,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_309.jpg61002": {
+      "filename": "VID_20181215_161954_309.jpg",
+      "size": 61002,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_310.jpg61470": {
+      "filename": "VID_20181215_161954_310.jpg",
+      "size": 61470,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_311.jpg58669": {
+      "filename": "VID_20181215_161954_311.jpg",
+      "size": 58669,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_312.jpg68027": {
+      "filename": "VID_20181215_161954_312.jpg",
+      "size": 68027,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_313.jpg56696": {
+      "filename": "VID_20181215_161954_313.jpg",
+      "size": 56696,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_314.jpg75493": {
+      "filename": "VID_20181215_161954_314.jpg",
+      "size": 75493,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_315.jpg59350": {
+      "filename": "VID_20181215_161954_315.jpg",
+      "size": 59350,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_316.jpg61793": {
+      "filename": "VID_20181215_161954_316.jpg",
+      "size": 61793,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_317.jpg61713": {
+      "filename": "VID_20181215_161954_317.jpg",
+      "size": 61713,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_318.jpg53160": {
+      "filename": "VID_20181215_161954_318.jpg",
+      "size": 53160,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_319.jpg69859": {
+      "filename": "VID_20181215_161954_319.jpg",
+      "size": 69859,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_320.jpg53682": {
+      "filename": "VID_20181215_161954_320.jpg",
+      "size": 53682,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_321.jpg65220": {
+      "filename": "VID_20181215_161954_321.jpg",
+      "size": 65220,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_322.jpg55916": {
+      "filename": "VID_20181215_161954_322.jpg",
+      "size": 55916,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_323.jpg59459": {
+      "filename": "VID_20181215_161954_323.jpg",
+      "size": 59459,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_324.jpg50690": {
+      "filename": "VID_20181215_161954_324.jpg",
+      "size": 50690,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_325.jpg52272": {
+      "filename": "VID_20181215_161954_325.jpg",
+      "size": 52272,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_326.jpg52166": {
+      "filename": "VID_20181215_161954_326.jpg",
+      "size": 52166,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_327.jpg51238": {
+      "filename": "VID_20181215_161954_327.jpg",
+      "size": 51238,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_328.jpg51612": {
+      "filename": "VID_20181215_161954_328.jpg",
+      "size": 51612,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_329.jpg50137": {
+      "filename": "VID_20181215_161954_329.jpg",
+      "size": 50137,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_330.jpg50935": {
+      "filename": "VID_20181215_161954_330.jpg",
+      "size": 50935,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_331.jpg48172": {
+      "filename": "VID_20181215_161954_331.jpg",
+      "size": 48172,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_332.jpg51183": {
+      "filename": "VID_20181215_161954_332.jpg",
+      "size": 51183,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_333.jpg52458": {
+      "filename": "VID_20181215_161954_333.jpg",
+      "size": 52458,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_334.jpg51325": {
+      "filename": "VID_20181215_161954_334.jpg",
+      "size": 51325,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_335.jpg54285": {
+      "filename": "VID_20181215_161954_335.jpg",
+      "size": 54285,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_336.jpg51717": {
+      "filename": "VID_20181215_161954_336.jpg",
+      "size": 51717,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_337.jpg52914": {
+      "filename": "VID_20181215_161954_337.jpg",
+      "size": 52914,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_338.jpg53292": {
+      "filename": "VID_20181215_161954_338.jpg",
+      "size": 53292,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_339.jpg54532": {
+      "filename": "VID_20181215_161954_339.jpg",
+      "size": 54532,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_340.jpg55437": {
+      "filename": "VID_20181215_161954_340.jpg",
+      "size": 55437,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_341.jpg55525": {
+      "filename": "VID_20181215_161954_341.jpg",
+      "size": 55525,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_342.jpg58964": {
+      "filename": "VID_20181215_161954_342.jpg",
+      "size": 58964,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_343.jpg52868": {
+      "filename": "VID_20181215_161954_343.jpg",
+      "size": 52868,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_344.jpg54051": {
+      "filename": "VID_20181215_161954_344.jpg",
+      "size": 54051,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_345.jpg50946": {
+      "filename": "VID_20181215_161954_345.jpg",
+      "size": 50946,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_346.jpg52709": {
+      "filename": "VID_20181215_161954_346.jpg",
+      "size": 52709,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_347.jpg52564": {
+      "filename": "VID_20181215_161954_347.jpg",
+      "size": 52564,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_348.jpg50488": {
+      "filename": "VID_20181215_161954_348.jpg",
+      "size": 50488,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_349.jpg62497": {
+      "filename": "VID_20181215_161954_349.jpg",
+      "size": 62497,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_350.jpg49060": {
+      "filename": "VID_20181215_161954_350.jpg",
+      "size": 49060,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_351.jpg58805": {
+      "filename": "VID_20181215_161954_351.jpg",
+      "size": 58805,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_352.jpg51120": {
+      "filename": "VID_20181215_161954_352.jpg",
+      "size": 51120,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_353.jpg53601": {
+      "filename": "VID_20181215_161954_353.jpg",
+      "size": 53601,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_354.jpg46224": {
+      "filename": "VID_20181215_161954_354.jpg",
+      "size": 46224,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_355.jpg45798": {
+      "filename": "VID_20181215_161954_355.jpg",
+      "size": 45798,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_356.jpg49111": {
+      "filename": "VID_20181215_161954_356.jpg",
+      "size": 49111,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_357.jpg51954": {
+      "filename": "VID_20181215_161954_357.jpg",
+      "size": 51954,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_358.jpg49905": {
+      "filename": "VID_20181215_161954_358.jpg",
+      "size": 49905,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_359.jpg50112": {
+      "filename": "VID_20181215_161954_359.jpg",
+      "size": 50112,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_360.jpg54934": {
+      "filename": "VID_20181215_161954_360.jpg",
+      "size": 54934,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_361.jpg50755": {
+      "filename": "VID_20181215_161954_361.jpg",
+      "size": 50755,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_362.jpg59358": {
+      "filename": "VID_20181215_161954_362.jpg",
+      "size": 59358,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_363.jpg53023": {
+      "filename": "VID_20181215_161954_363.jpg",
+      "size": 53023,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_364.jpg59103": {
+      "filename": "VID_20181215_161954_364.jpg",
+      "size": 59103,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_365.jpg48844": {
+      "filename": "VID_20181215_161954_365.jpg",
+      "size": 48844,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_366.jpg62841": {
+      "filename": "VID_20181215_161954_366.jpg",
+      "size": 62841,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_367.jpg49328": {
+      "filename": "VID_20181215_161954_367.jpg",
+      "size": 49328,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_368.jpg51744": {
+      "filename": "VID_20181215_161954_368.jpg",
+      "size": 51744,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_369.jpg55806": {
+      "filename": "VID_20181215_161954_369.jpg",
+      "size": 55806,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_370.jpg50827": {
+      "filename": "VID_20181215_161954_370.jpg",
+      "size": 50827,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_371.jpg68327": {
+      "filename": "VID_20181215_161954_371.jpg",
+      "size": 68327,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_372.jpg55256": {
+      "filename": "VID_20181215_161954_372.jpg",
+      "size": 55256,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_373.jpg62772": {
+      "filename": "VID_20181215_161954_373.jpg",
+      "size": 62772,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_374.jpg58998": {
+      "filename": "VID_20181215_161954_374.jpg",
+      "size": 58998,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_375.jpg59726": {
+      "filename": "VID_20181215_161954_375.jpg",
+      "size": 59726,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_376.jpg60709": {
+      "filename": "VID_20181215_161954_376.jpg",
+      "size": 60709,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_377.jpg55069": {
+      "filename": "VID_20181215_161954_377.jpg",
+      "size": 55069,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_378.jpg54255": {
+      "filename": "VID_20181215_161954_378.jpg",
+      "size": 54255,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_379.jpg48190": {
+      "filename": "VID_20181215_161954_379.jpg",
+      "size": 48190,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_380.jpg57528": {
+      "filename": "VID_20181215_161954_380.jpg",
+      "size": 57528,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_381.jpg50531": {
+      "filename": "VID_20181215_161954_381.jpg",
+      "size": 50531,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_382.jpg59711": {
+      "filename": "VID_20181215_161954_382.jpg",
+      "size": 59711,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_383.jpg52136": {
+      "filename": "VID_20181215_161954_383.jpg",
+      "size": 52136,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_384.jpg55645": {
+      "filename": "VID_20181215_161954_384.jpg",
+      "size": 55645,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_385.jpg45413": {
+      "filename": "VID_20181215_161954_385.jpg",
+      "size": 45413,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_386.jpg62993": {
+      "filename": "VID_20181215_161954_386.jpg",
+      "size": 62993,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_387.jpg49900": {
+      "filename": "VID_20181215_161954_387.jpg",
+      "size": 49900,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_388.jpg63621": {
+      "filename": "VID_20181215_161954_388.jpg",
+      "size": 63621,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_389.jpg56655": {
+      "filename": "VID_20181215_161954_389.jpg",
+      "size": 56655,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_390.jpg59799": {
+      "filename": "VID_20181215_161954_390.jpg",
+      "size": 59799,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_391.jpg59156": {
+      "filename": "VID_20181215_161954_391.jpg",
+      "size": 59156,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_392.jpg57450": {
+      "filename": "VID_20181215_161954_392.jpg",
+      "size": 57450,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_393.jpg65403": {
+      "filename": "VID_20181215_161954_393.jpg",
+      "size": 65403,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_394.jpg56368": {
+      "filename": "VID_20181215_161954_394.jpg",
+      "size": 56368,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_395.jpg65980": {
+      "filename": "VID_20181215_161954_395.jpg",
+      "size": 65980,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_396.jpg55174": {
+      "filename": "VID_20181215_161954_396.jpg",
+      "size": 55174,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_397.jpg59245": {
+      "filename": "VID_20181215_161954_397.jpg",
+      "size": 59245,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_398.jpg60243": {
+      "filename": "VID_20181215_161954_398.jpg",
+      "size": 60243,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_399.jpg59217": {
+      "filename": "VID_20181215_161954_399.jpg",
+      "size": 59217,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_400.jpg63097": {
+      "filename": "VID_20181215_161954_400.jpg",
+      "size": 63097,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_401.jpg61960": {
+      "filename": "VID_20181215_161954_401.jpg",
+      "size": 61960,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_402.jpg58806": {
+      "filename": "VID_20181215_161954_402.jpg",
+      "size": 58806,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_403.jpg57319": {
+      "filename": "VID_20181215_161954_403.jpg",
+      "size": 57319,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_404.jpg58180": {
+      "filename": "VID_20181215_161954_404.jpg",
+      "size": 58180,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_405.jpg57554": {
+      "filename": "VID_20181215_161954_405.jpg",
+      "size": 57554,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_406.jpg59618": {
+      "filename": "VID_20181215_161954_406.jpg",
+      "size": 59618,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_407.jpg56101": {
+      "filename": "VID_20181215_161954_407.jpg",
+      "size": 56101,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_408.jpg61057": {
+      "filename": "VID_20181215_161954_408.jpg",
+      "size": 61057,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_409.jpg57742": {
+      "filename": "VID_20181215_161954_409.jpg",
+      "size": 57742,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_410.jpg61071": {
+      "filename": "VID_20181215_161954_410.jpg",
+      "size": 61071,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_411.jpg55933": {
+      "filename": "VID_20181215_161954_411.jpg",
+      "size": 55933,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_412.jpg63218": {
+      "filename": "VID_20181215_161954_412.jpg",
+      "size": 63218,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_413.jpg61998": {
+      "filename": "VID_20181215_161954_413.jpg",
+      "size": 61998,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_414.jpg57614": {
+      "filename": "VID_20181215_161954_414.jpg",
+      "size": 57614,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_415.jpg60240": {
+      "filename": "VID_20181215_161954_415.jpg",
+      "size": 60240,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_416.jpg59093": {
+      "filename": "VID_20181215_161954_416.jpg",
+      "size": 59093,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_417.jpg69020": {
+      "filename": "VID_20181215_161954_417.jpg",
+      "size": 69020,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_418.jpg59993": {
+      "filename": "VID_20181215_161954_418.jpg",
+      "size": 59993,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_419.jpg64619": {
+      "filename": "VID_20181215_161954_419.jpg",
+      "size": 64619,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_420.jpg53305": {
+      "filename": "VID_20181215_161954_420.jpg",
+      "size": 53305,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_421.jpg57876": {
+      "filename": "VID_20181215_161954_421.jpg",
+      "size": 57876,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_422.jpg57709": {
+      "filename": "VID_20181215_161954_422.jpg",
+      "size": 57709,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_423.jpg62244": {
+      "filename": "VID_20181215_161954_423.jpg",
+      "size": 62244,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_424.jpg60500": {
+      "filename": "VID_20181215_161954_424.jpg",
+      "size": 60500,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_425.jpg60408": {
+      "filename": "VID_20181215_161954_425.jpg",
+      "size": 60408,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_426.jpg59926": {
+      "filename": "VID_20181215_161954_426.jpg",
+      "size": 59926,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_427.jpg56936": {
+      "filename": "VID_20181215_161954_427.jpg",
+      "size": 56936,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_428.jpg63434": {
+      "filename": "VID_20181215_161954_428.jpg",
+      "size": 63434,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_429.jpg54682": {
+      "filename": "VID_20181215_161954_429.jpg",
+      "size": 54682,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_430.jpg66106": {
+      "filename": "VID_20181215_161954_430.jpg",
+      "size": 66106,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_431.jpg57208": {
+      "filename": "VID_20181215_161954_431.jpg",
+      "size": 57208,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_432.jpg68186": {
+      "filename": "VID_20181215_161954_432.jpg",
+      "size": 68186,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_433.jpg54421": {
+      "filename": "VID_20181215_161954_433.jpg",
+      "size": 54421,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_434.jpg71231": {
+      "filename": "VID_20181215_161954_434.jpg",
+      "size": 71231,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_435.jpg54877": {
+      "filename": "VID_20181215_161954_435.jpg",
+      "size": 54877,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_436.jpg74315": {
+      "filename": "VID_20181215_161954_436.jpg",
+      "size": 74315,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_437.jpg57340": {
+      "filename": "VID_20181215_161954_437.jpg",
+      "size": 57340,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_438.jpg83007": {
+      "filename": "VID_20181215_161954_438.jpg",
+      "size": 83007,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_439.jpg54290": {
+      "filename": "VID_20181215_161954_439.jpg",
+      "size": 54290,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_440.jpg72611": {
+      "filename": "VID_20181215_161954_440.jpg",
+      "size": 72611,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_441.jpg55244": {
+      "filename": "VID_20181215_161954_441.jpg",
+      "size": 55244,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_442.jpg70383": {
+      "filename": "VID_20181215_161954_442.jpg",
+      "size": 70383,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_443.jpg70575": {
+      "filename": "VID_20181215_161954_443.jpg",
+      "size": 70575,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_444.jpg67597": {
+      "filename": "VID_20181215_161954_444.jpg",
+      "size": 67597,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_445.jpg72306": {
+      "filename": "VID_20181215_161954_445.jpg",
+      "size": 72306,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_446.jpg65231": {
+      "filename": "VID_20181215_161954_446.jpg",
+      "size": 65231,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_447.jpg69853": {
+      "filename": "VID_20181215_161954_447.jpg",
+      "size": 69853,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_448.jpg63460": {
+      "filename": "VID_20181215_161954_448.jpg",
+      "size": 63460,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_449.jpg70201": {
+      "filename": "VID_20181215_161954_449.jpg",
+      "size": 70201,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_450.jpg50534": {
+      "filename": "VID_20181215_161954_450.jpg",
+      "size": 50534,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_451.jpg57911": {
+      "filename": "VID_20181215_161954_451.jpg",
+      "size": 57911,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_452.jpg58798": {
+      "filename": "VID_20181215_161954_452.jpg",
+      "size": 58798,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_453.jpg65963": {
+      "filename": "VID_20181215_161954_453.jpg",
+      "size": 65963,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_454.jpg58932": {
+      "filename": "VID_20181215_161954_454.jpg",
+      "size": 58932,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_455.jpg69102": {
+      "filename": "VID_20181215_161954_455.jpg",
+      "size": 69102,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_456.jpg60043": {
+      "filename": "VID_20181215_161954_456.jpg",
+      "size": 60043,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_457.jpg68177": {
+      "filename": "VID_20181215_161954_457.jpg",
+      "size": 68177,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_458.jpg63871": {
+      "filename": "VID_20181215_161954_458.jpg",
+      "size": 63871,
+      "regions": [],
+      "file_attributes": {}
+    },
+    "VID_20181215_161954_459.jpg69713": {
+      "filename": "VID_20181215_161954_459.jpg",
+      "size": 69713,
+      "regions": [],
+      "file_attributes": {}
+    }
+  },
+  "_via_attributes": {
+    "region": {},
+    "file": {}
+  }
+}
