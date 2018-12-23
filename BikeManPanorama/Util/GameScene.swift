@@ -98,22 +98,15 @@ final class GameScene: SKScene {
             self.createLine(with: self.cgPointList)
             
             self.checkIfBikeManPassingThroughLine()
-            
-//            let gap: CGFloat = 100.0
-//            if self.isAnimating && self.bikeMan!.position.x <= -self.size.width / 2 - gap || self.bikeMan!.position.y <= -self.size.height / 2 - gap {
-//                self.gameOver()
-//            }
-            
         })
     }
     
     private func checkIfBikeManPassingThroughLine() {
         if isAnimating {
-            var tempCgList: [CGPoint] = cgPointList[(cgPointList.count - currentFrameCount) % cgPointList.count]
-            let xSameCgPoint = tempCgList.filter({Int($0.x) == Int(bikeMan!.position.x)})
-            let ySameCgPoint = tempCgList.filter({Int($0.y) == Int(bikeMan!.position.y)})
+            let tempCgList: [CGPoint] = cgPointList[(cgPointList.count - currentFrameCount) % cgPointList.count]
+            let xSameCgPoint = tempCgList.filter({abs(Int($0.x) - Int(bikeMan!.position.x)) <= 2})
             if xSameCgPoint.count > 0 {
-                
+                //make the game over if it is close to the leading end of the screen
                 let gap: CGFloat = -100
                 if self.isAnimating && self.bikeMan!.position.x <= -self.size.width / 2 - gap || self.bikeMan!.position.y <= -self.size.height / 2 - gap {
                     self.gameOver()
@@ -124,20 +117,6 @@ final class GameScene: SKScene {
                    bikeMan!.position.y = xSameCgPoint[0].y + 0.1
                 }
             }
-//            if ySameCgPoint.count > 0 {
-//                var closestDistance: CGFloat = 1000000
-//                var closestPoint =  CGPoint(x: 0, y: 0)
-//                ySameCgPoint.map { (point) -> Void in
-//                    let tempDistance = CGPointDistance(from: point, to: bikeMan!.position)
-//                    if tempDistance < closestDistance {
-//                        closestDistance = tempDistance
-//                        closestPoint = point
-//                    }
-//                }
-//                if closestPoint.x < bikeMan!.position.x {
-//                    bikeMan!.position.x = closestPoint.x - 0.1
-//                }
-//            }
         }
     }
     private func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
@@ -151,8 +130,6 @@ final class GameScene: SKScene {
     private func createLine(with list: [[CGPoint]]) {
         //reverse image
         var tempCgList: [CGPoint] = list[(list.count - currentFrameCount) % list.count]
-//        var tempCgList: [CGPoint] = list[currentFrameCount % list.count]
-        
         line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
         if let line = line {
             let path = CGMutablePath()
@@ -244,7 +221,7 @@ final class GameScene: SKScene {
         if mode == "秋葉原→神田" {
             movieBG = SKSpriteNode(imageNamed: "image_1")
         } else {
-            movieBG = SKSpriteNode(imageNamed: "image2_101")
+            movieBG = SKSpriteNode(imageNamed: "0")
         }
         if let movieBG = movieBG {
             movieBG.position = CGPoint(x: 360 / 2 * 3.38 - size.width / 2, y: 720 / 2 * 3.38 - size.height / 2)
@@ -263,9 +240,9 @@ final class GameScene: SKScene {
                 frames.append(frame)
             }
         } else {
-            for i in 101...351 {
-                let index = 452 - i
-                let frame = SKTexture.init(imageNamed: "image2_\(index)")
+            for i in 0...249 {
+                let index = 249 - i
+                let frame = SKTexture.init(imageNamed: "\(index)")
                 frames.append(frame)
             }
         }
