@@ -25,9 +25,8 @@ final class GameScene: SKScene {
     var mode: String?
     
     //parameters
-    private var groundList = [(minX: CGFloat, minY: CGFloat, maxX: CGFloat, maxY: CGFloat)]()
-    private var pointList = [CGPoint]()
-    private var realStageList = [RealStage]()
+    private var pointList = [RealStage]()
+    private var cgPointList = [[CGPoint]]()
     private var isGameStarted = false
     private var isAnimating = false
     
@@ -75,12 +74,12 @@ final class GameScene: SKScene {
                 return
             }
             dataSize = jsonArray.count
-            realStageList = jsonArray.map { (json) -> RealStage in
+            pointList = jsonArray.map { (json) -> RealStage in
                 let realStage = RealStage(img: json["img"] as! [Dictionary<String, Int>])
                 return realStage
             }
             
-            let cgPointList: [[CGPoint]] = realStageList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
+            let cgPointList: [[CGPoint]] = pointList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
             
             createLine(with: cgPointList)
             
@@ -88,16 +87,65 @@ final class GameScene: SKScene {
             print("Error", parsingError)
         }
         lineTimer = Timer.scheduledTimer(withTimeInterval: 0.03, repeats: true, block: { (timer) in
-            self.self.currentFrameCount += 1
+            self.currentFrameCount += 1
             if self.currentFrameCount > dataSize {
                 self.currentFrameCount %= dataSize
             }
             if let line = self.line {
                 line.removeFromParent()
             }
-            let cgPointList: [[CGPoint]] = self.realStageList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
-            self.createLine(with: cgPointList)
+            self.cgPointList = self.pointList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
+            self.createLine(with: self.cgPointList)
+            
+            self.checkIfBikeManPassingThroughLine()
+            
+//            let gap: CGFloat = 100.0
+//            if self.isAnimating && self.bikeMan!.position.x <= -self.size.width / 2 - gap || self.bikeMan!.position.y <= -self.size.height / 2 - gap {
+//                self.gameOver()
+//            }
+            
         })
+    }
+    
+    private func checkIfBikeManPassingThroughLine() {
+        if isAnimating {
+            var tempCgList: [CGPoint] = cgPointList[(cgPointList.count - currentFrameCount) % cgPointList.count]
+            let xSameCgPoint = tempCgList.filter({Int($0.x) == Int(bikeMan!.position.x)})
+            let ySameCgPoint = tempCgList.filter({Int($0.y) == Int(bikeMan!.position.y)})
+            if xSameCgPoint.count > 0 {
+                
+                let gap: CGFloat = -100
+                if self.isAnimating && self.bikeMan!.position.x <= -self.size.width / 2 - gap || self.bikeMan!.position.y <= -self.size.height / 2 - gap {
+                    self.gameOver()
+                    self.bikeMan?.isHidden = true
+                    return
+                }
+                if xSameCgPoint[0].y > bikeMan!.position.y {
+                   bikeMan!.position.y = xSameCgPoint[0].y + 0.1
+                }
+            }
+//            if ySameCgPoint.count > 0 {
+//                var closestDistance: CGFloat = 1000000
+//                var closestPoint =  CGPoint(x: 0, y: 0)
+//                ySameCgPoint.map { (point) -> Void in
+//                    let tempDistance = CGPointDistance(from: point, to: bikeMan!.position)
+//                    if tempDistance < closestDistance {
+//                        closestDistance = tempDistance
+//                        closestPoint = point
+//                    }
+//                }
+//                if closestPoint.x < bikeMan!.position.x {
+//                    bikeMan!.position.x = closestPoint.x - 0.1
+//                }
+//            }
+        }
+    }
+    private func CGPointDistanceSquared(from: CGPoint, to: CGPoint) -> CGFloat {
+        return (from.x - to.x) * (from.x - to.x) + (from.y - to.y) * (from.y - to.y)
+    }
+    
+    private func CGPointDistance(from: CGPoint, to: CGPoint) -> CGFloat {
+        return sqrt(CGPointDistanceSquared(from: from, to: to))
     }
     
     private func createLine(with list: [[CGPoint]]) {
@@ -106,17 +154,13 @@ final class GameScene: SKScene {
 //        var tempCgList: [CGPoint] = list[currentFrameCount % list.count]
         
         line = SKShapeNode(points: &tempCgList, count: tempCgList.count)
-        line?.physicsBody?.categoryBitMask = groundCategory
-        line?.physicsBody?.usesPreciseCollisionDetection = true
-        line?.physicsBody?.contactTestBitMask = bikeManCategory
-        line?.physicsBody?.collisionBitMask = bikeManCategory
         if let line = line {
             let path = CGMutablePath()
             path.addLines(between: tempCgList)
             path.closeSubpath()
             line.physicsBody = SKPhysicsBody(edgeChainFrom: path)
             line.physicsBody?.categoryBitMask = self.groundCategory
-            line.physicsBody?.contactTestBitMask = self.bikeManCategory
+//            line.physicsBody?.contactTestBitMask = self.bikeManCategory
             line.physicsBody?.collisionBitMask = self.bikeManCategory
             line.physicsBody?.affectedByGravity = false
             line.physicsBody?.isDynamic = false
@@ -331,6 +375,8 @@ final class GameScene: SKScene {
                 gameOver()
             }
             
+            
+            
             if !isAnimating && bikeMan.position.x >= size.width / 2 + 50 {
                 scene?.isPaused = true
             }
@@ -354,12 +400,13 @@ final class GameScene: SKScene {
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         if contact.bodyA.categoryBitMask == bikeManCategory {
-            contact.bodyA.angularVelocity = 0
+//            contact.bodyA.angularVelocity = 0
+//            contact.contactPoint
 //            print("contact!")
         }
         
         if contact.bodyB.categoryBitMask == bikeManCategory {
-            contact.bodyB.angularVelocity = 0
+//            contact.bodyB.angularVelocity = 0
 //            print("contact!")
         }
     }
