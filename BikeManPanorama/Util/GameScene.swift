@@ -70,16 +70,27 @@ final class GameScene: SKScene {
         var dataSize = 0
         do {
             let jsonResponse = try JSONSerialization.jsonObject(with: data, options: [])
-            guard let jsonArray = jsonResponse as? [[String: Any]] else {
+            guard var jsonArray = jsonResponse as? [[String: Any]] else {
                 return
             }
+            //revise the gap
+            if mode != "信濃町→千駄ケ谷" {
+                for i in 0...7 {
+                    jsonArray.removeLast()
+                }
+            }
+            
             dataSize = jsonArray.count
+
             pointList = jsonArray.map { (json) -> RealStage in
                 let realStage = RealStage(img: json["img"] as! [Dictionary<String, Int>])
                 return realStage
             }
             
+            
+            
             let cgPointList: [[CGPoint]] = pointList.map({return $0.img.map({return CGPoint(x: CGFloat($0["x"] as! Int) * CGFloat(3.38) - CGFloat(self.size.width / 2), y: self.size.height - CGFloat($0["y"] as! Int) * CGFloat(3.38) - CGFloat(self.size.height / 2))})})
+            
             
             createLine(with: cgPointList)
             
@@ -113,7 +124,14 @@ final class GameScene: SKScene {
                     self.bikeMan?.isHidden = true
                     return
                 }
-                if xSameCgPoint[0].y > bikeMan!.position.y {
+                print(currentFrameCount)
+                
+                if currentFrameCount == 179 {
+                    gameOver()
+                    self.bikeMan?.isHidden = true
+                    
+                }
+                if xSameCgPoint[0].y > bikeMan!.position.y && currentFrameCount <= 170 {
                    bikeMan!.position.y = xSameCgPoint[0].y + 0.1
                 }
             }
@@ -218,7 +236,7 @@ final class GameScene: SKScene {
     }
     
     private func createMovieBG(mode: String) {
-        if mode == "秋葉原→神田" {
+        if mode == "信濃町→千駄ケ谷" {
             movieBG = SKSpriteNode(imageNamed: "image_1")
         } else {
             movieBG = SKSpriteNode(imageNamed: "0")
@@ -233,15 +251,16 @@ final class GameScene: SKScene {
     
     private func animateMovie(mode: String) {
         var frames = [SKTexture]()
-        if mode == "秋葉原→神田" {
+        if mode == "信濃町→千駄ケ谷" {
             for i in 1...183 {
                 let index = 184 - i
                 let frame = SKTexture.init(imageNamed: "image_\(index)")
                 frames.append(frame)
             }
         } else {
-            for i in 0...249 {
-                let index = 249 - i
+            //revise the gap
+            for i in 8...249 {
+                let index = 257 - i
                 let frame = SKTexture.init(imageNamed: "\(index)")
                 frames.append(frame)
             }
@@ -267,7 +286,7 @@ final class GameScene: SKScene {
             background.run(moveBackground)
         }
         
-        let jsonString = mode == "秋葉原→神田" ? "VID_cropped.mask" : "VID_250_mask"
+        let jsonString = mode == "信濃町→千駄ケ谷" ? "VID_cropped.mask" : "VID_250_mask"
         
         if let data = try? getJSONData(jsonWithoutExtension: jsonString) {
             createPointListFromJSON(with: data!)
@@ -351,8 +370,6 @@ final class GameScene: SKScene {
             if isAnimating && bikeMan.position.x <= -size.width / 2 - gap || bikeMan.position.y <= -size.height / 2 - gap {
                 gameOver()
             }
-            
-            
             
             if !isAnimating && bikeMan.position.x >= size.width / 2 + 50 {
                 scene?.isPaused = true
